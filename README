@@ -1,1 +1,0 @@
-This Zotero extension adds an option to the Zotero Actions (gear) menu to export item and field mappings from Zotero to Citation Style Language (CSL). The mappings are in xml format and work with typeMap.xsl and typeMap.css files (found in the extension directory) to create a usable page.
