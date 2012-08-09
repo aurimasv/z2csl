@@ -37,8 +37,11 @@
         <xsl:for-each select="field">
         <xsl:sort select="@value"/>
           <tr>
-            <td><xsl:value-of select="@value"/></td>
-            <td><xsl:value-of select="/map/cslFieldMap/fieldMap[@zField=current()/@value]/@cslField"/></td>
+            <td>
+              <xsl:value-of select="@value"/>
+              <xsl:if test="@baseField"> (<xsl:value-of select="@baseField"/>)</xsl:if>
+            </td>
+            <td><xsl:value-of select="(/map/cslFieldMap/fieldMap[@zField=current()/@value] | /map/cslFieldMap/fieldMap[@zField=current()/@baseField])[1]/@cslField"/></td>
           </tr>
           <xsl:if test="@value = 'creator'">
             <xsl:for-each select="creatorType">
