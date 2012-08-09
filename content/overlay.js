@@ -13,16 +13,32 @@ var z2csl = {
 		var map = {name:'map', childNodes:[] };
 
 		var zoteroTypes = Zotero.ItemTypes.getTypes();
-		var fields, type, creatorNodes, creators;
+		var fields, fieldMap, baseField, type, creatorNodes, creators;
 		var nodes = [];
 
 		for(var i=0, n=zoteroTypes.length; i<n; i++) {
-		  type = {name:'typeMap', attributes:{zType:zoteroTypes[i].name, cslType:cslTypeMap[zoteroTypes[i].name]}, childNodes:[]};
+		  type = {name:'typeMap',
+		          attributes:{
+		            zType:zoteroTypes[i].name,
+		            cslType:cslTypeMap[zoteroTypes[i].name]
+		          },
+		          childNodes:[]};
 
 		  fields = Zotero.ItemFields.getItemTypeFields(zoteroTypes[i].id);
 		  for(var j=0, m=fields.length; j<m; j++) {
-	      type.childNodes.push({name:'field', attributes:{ value:Zotero.ItemFields.getName(fields[j]) } });
+		    fieldMap = {name:'field', attributes:{ value:Zotero.ItemFields.getName(fields[j]) } };
+
+		    //Also retrieve base field so we can map to CSL
+		    if(!Zotero.ItemFields.isBaseField(fields[j])) {
+		      baseField = Zotero.ItemFields.getBaseIDFromTypeAndField(zoteroTypes[i].id, fields[j]);
+  		    if(baseField !== false) {
+  		      fieldMap.attributes.baseField = Zotero.ItemFields.getName(baseField);
+  		    }
+  		  }
+  
+ 	      type.childNodes.push(fieldMap);
       }
+
       //add valid creator types
       creators = Zotero.CreatorTypes.getTypesForItemType(zoteroTypes[i].id);
       if(creators.length) {
