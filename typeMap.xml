@@ -39,7 +39,7 @@
     <typeMap zType="bookSection" cslType="chapter">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="bookTitle" />
+      <field value="bookTitle" baseField="publicationTitle" />
       <field value="series" />
       <field value="seriesNumber" />
       <field value="volume" />
@@ -157,8 +157,8 @@
     <typeMap zType="thesis" cslType="thesis">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="thesisType" />
-      <field value="university" />
+      <field value="thesisType" baseField="type" />
+      <field value="university" baseField="publisher" />
       <field value="place" />
       <field value="date" />
       <field value="numPages" />
@@ -180,7 +180,7 @@
     <typeMap zType="letter" cslType="personal_communication">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="letterType" />
+      <field value="letterType" baseField="type" />
       <field value="date" />
       <field value="language" />
       <field value="shortTitle" />
@@ -201,7 +201,7 @@
     <typeMap zType="manuscript" cslType="manuscript">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="manuscriptType" />
+      <field value="manuscriptType" baseField="type" />
       <field value="place" />
       <field value="date" />
       <field value="numPages" />
@@ -225,7 +225,7 @@
       <field value="title" />
       <field value="abstractNote" />
       <field value="date" />
-      <field value="interviewMedium" />
+      <field value="interviewMedium" baseField="medium" />
       <field value="language" />
       <field value="shortTitle" />
       <field value="url" />
@@ -246,10 +246,10 @@
     <typeMap zType="film" cslType="motion_picture">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="distributor" />
+      <field value="distributor" baseField="publisher" />
       <field value="date" />
-      <field value="genre" />
-      <field value="videoRecordingFormat" />
+      <field value="genre" baseField="type" />
+      <field value="videoRecordingFormat" baseField="medium" />
       <field value="runningTime" />
       <field value="language" />
       <field value="shortTitle" />
@@ -271,7 +271,7 @@
     <typeMap zType="artwork" cslType="graphic">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="artworkMedium" />
+      <field value="artworkMedium" baseField="medium" />
       <field value="artworkSize" />
       <field value="date" />
       <field value="language" />
@@ -292,8 +292,8 @@
     <typeMap zType="webpage" cslType="webpage">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="websiteTitle" />
-      <field value="websiteType" />
+      <field value="websiteTitle" baseField="publicationTitle" />
+      <field value="websiteType" baseField="type" />
       <field value="date" />
       <field value="shortTitle" />
       <field value="url" />
@@ -315,11 +315,11 @@
     <typeMap zType="report" cslType="report">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="reportNumber" />
-      <field value="reportType" />
+      <field value="reportNumber" baseField="number" />
+      <field value="reportType" baseField="type" />
       <field value="seriesTitle" />
       <field value="place" />
-      <field value="institution" />
+      <field value="institution" baseField="publisher" />
       <field value="date" />
       <field value="pages" />
       <field value="language" />
@@ -342,11 +342,11 @@
     <typeMap zType="bill" cslType="bill">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="billNumber" />
+      <field value="billNumber" baseField="number" />
       <field value="code" />
-      <field value="codeVolume" />
+      <field value="codeVolume" baseField="volume" />
       <field value="section" />
-      <field value="codePages" />
+      <field value="codePages" baseField="pages" />
       <field value="legislativeBody" />
       <field value="session" />
       <field value="history" />
@@ -364,15 +364,15 @@
       </field>
     </typeMap>
     <typeMap zType="case" cslType="legal_case">
-      <field value="caseName" />
+      <field value="caseName" baseField="title" />
       <field value="abstractNote" />
       <field value="reporter" />
-      <field value="reporterVolume" />
+      <field value="reporterVolume" baseField="volume" />
       <field value="court" />
-      <field value="docketNumber" />
-      <field value="firstPage" />
+      <field value="docketNumber" baseField="number" />
+      <field value="firstPage" baseField="pages" />
       <field value="history" />
-      <field value="dateDecided" />
+      <field value="dateDecided" baseField="date" />
       <field value="language" />
       <field value="shortTitle" />
       <field value="url" />
@@ -392,7 +392,7 @@
       <field value="place" />
       <field value="publisher" />
       <field value="numberOfVolumes" />
-      <field value="documentNumber" />
+      <field value="documentNumber" baseField="number" />
       <field value="pages" />
       <field value="legislativeBody" />
       <field value="session" />
@@ -415,12 +415,12 @@
       <field value="country" />
       <field value="assignee" />
       <field value="issuingAuthority" />
-      <field value="patentNumber" />
+      <field value="patentNumber" baseField="number" />
       <field value="filingDate" />
       <field value="pages" />
       <field value="applicationNumber" />
       <field value="priorityNumbers" />
-      <field value="issueDate" />
+      <field value="issueDate" baseField="date" />
       <field value="references" />
       <field value="legalStatus" />
       <field value="language" />
@@ -436,12 +436,12 @@
       </field>
     </typeMap>
     <typeMap zType="statute" cslType="legislation">
-      <field value="nameOfAct" />
+      <field value="nameOfAct" baseField="title" />
       <field value="abstractNote" />
       <field value="code" />
       <field value="codeNumber" />
-      <field value="publicLawNumber" />
-      <field value="dateEnacted" />
+      <field value="publicLawNumber" baseField="number" />
+      <field value="dateEnacted" baseField="date" />
       <field value="pages" />
       <field value="section" />
       <field value="session" />
@@ -458,7 +458,7 @@
       </field>
     </typeMap>
     <typeMap zType="email" cslType="personal_communication">
-      <field value="subject" />
+      <field value="subject" baseField="title" />
       <field value="abstractNote" />
       <field value="date" />
       <field value="shortTitle" />
@@ -476,7 +476,7 @@
     <typeMap zType="map" cslType="map">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="mapType" />
+      <field value="mapType" baseField="type" />
       <field value="scale" />
       <field value="seriesTitle" />
       <field value="edition" />
@@ -503,8 +503,8 @@
     <typeMap zType="blogPost" cslType="post-weblog">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="blogTitle" />
-      <field value="websiteType" />
+      <field value="blogTitle" baseField="publicationTitle" />
+      <field value="websiteType" baseField="type" />
       <field value="date" />
       <field value="url" />
       <field value="accessDate" />
@@ -537,8 +537,8 @@
     <typeMap zType="forumPost" cslType="post">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="forumTitle" />
-      <field value="postType" />
+      <field value="forumTitle" baseField="publicationTitle" />
+      <field value="postType" baseField="type" />
       <field value="date" />
       <field value="language" />
       <field value="shortTitle" />
@@ -554,12 +554,12 @@
     <typeMap zType="audioRecording" cslType="song">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="audioRecordingFormat" />
+      <field value="audioRecordingFormat" baseField="medium" />
       <field value="seriesTitle" />
       <field value="volume" />
       <field value="numberOfVolumes" />
       <field value="place" />
-      <field value="label" />
+      <field value="label" baseField="publisher" />
       <field value="date" />
       <field value="runningTime" />
       <field value="language" />
@@ -583,7 +583,7 @@
     <typeMap zType="presentation" cslType="speech">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="presentationType" />
+      <field value="presentationType" baseField="type" />
       <field value="date" />
       <field value="place" />
       <field value="meetingName" />
@@ -601,12 +601,12 @@
     <typeMap zType="videoRecording" cslType="motion_picture">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="videoRecordingFormat" />
+      <field value="videoRecordingFormat" baseField="medium" />
       <field value="seriesTitle" />
       <field value="volume" />
       <field value="numberOfVolumes" />
       <field value="place" />
-      <field value="studio" />
+      <field value="studio" baseField="publisher" />
       <field value="date" />
       <field value="runningTime" />
       <field value="language" />
@@ -631,11 +631,11 @@
     <typeMap zType="tvBroadcast" cslType="broadcast">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="programTitle" />
-      <field value="episodeNumber" />
-      <field value="videoRecordingFormat" />
+      <field value="programTitle" baseField="publicationTitle" />
+      <field value="episodeNumber" baseField="number" />
+      <field value="videoRecordingFormat" baseField="medium" />
       <field value="place" />
-      <field value="network" />
+      <field value="network" baseField="publisher" />
       <field value="date" />
       <field value="runningTime" />
       <field value="language" />
@@ -660,11 +660,11 @@
     <typeMap zType="radioBroadcast" cslType="broadcast">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="programTitle" />
-      <field value="episodeNumber" />
-      <field value="audioRecordingFormat" />
+      <field value="programTitle" baseField="publicationTitle" />
+      <field value="episodeNumber" baseField="number" />
+      <field value="audioRecordingFormat" baseField="medium" />
       <field value="place" />
-      <field value="network" />
+      <field value="network" baseField="publisher" />
       <field value="date" />
       <field value="runningTime" />
       <field value="language" />
@@ -690,8 +690,8 @@
       <field value="title" />
       <field value="abstractNote" />
       <field value="seriesTitle" />
-      <field value="episodeNumber" />
-      <field value="audioFileType" />
+      <field value="episodeNumber" baseField="number" />
+      <field value="audioFileType" baseField="medium" />
       <field value="runningTime" />
       <field value="url" />
       <field value="accessDate" />
@@ -713,7 +713,7 @@
       <field value="date" />
       <field value="system" />
       <field value="place" />
-      <field value="company" />
+      <field value="company" baseField="publisher" />
       <field value="programmingLanguage" />
       <field value="ISBN" />
       <field value="shortTitle" />
@@ -734,7 +734,7 @@
       <field value="title" />
       <field value="abstractNote" />
       <field value="date" />
-      <field value="proceedingsTitle" />
+      <field value="proceedingsTitle" baseField="publicationTitle" />
       <field value="conferenceName" />
       <field value="place" />
       <field value="publisher" />
@@ -787,7 +787,7 @@
     <typeMap zType="encyclopediaArticle" cslType="entry-encyclopedia">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="encyclopediaTitle" />
+      <field value="encyclopediaTitle" baseField="publicationTitle" />
       <field value="series" />
       <field value="seriesNumber" />
       <field value="volume" />
@@ -819,7 +819,7 @@
     <typeMap zType="dictionaryEntry" cslType="entry-dictionary">
       <field value="title" />
       <field value="abstractNote" />
-      <field value="dictionaryTitle" />
+      <field value="dictionaryTitle" baseField="publicationTitle" />
       <field value="series" />
       <field value="seriesNumber" />
       <field value="volume" />
