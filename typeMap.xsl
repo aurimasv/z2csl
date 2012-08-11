@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -41,14 +41,19 @@
               <xsl:value-of select="@value"/>
               <xsl:if test="@baseField"> (<xsl:value-of select="@baseField"/>)</xsl:if>
             </td>
-            <td><xsl:value-of select="(/map/cslFieldMap/fieldMap[@zField=current()/@value] | /map/cslFieldMap/fieldMap[@zField=current()/@baseField])[1]/@cslField"/></td>
+            <td><xsl:value-of select="(/map/cslFieldMap/fieldMap[@zField=current()/@baseField] | /map/cslFieldMap/fieldMap[@zField=current()/@value])[1]/@cslField"/></td>
           </tr>
           <xsl:if test="@value = 'creator'">
             <xsl:for-each select="creatorType">
             <xsl:sort select="@value"/>
               <tr>
-                <td class="zSubType"><xsl:value-of select="@value"/></td>
-                <td class="zSubType"><xsl:value-of select="/map/cslCreatorMap/creatorMap[@zCreator=current()/@value]/@cslCreator"/></td>
+                <td class="zSubType">
+                  <xsl:value-of select="@value"/>
+                  <xsl:if test="@baseField"> (<xsl:value-of select="@baseField"/>)</xsl:if>
+                </td>
+                <td class="zSubType">
+                  <xsl:value-of select="(/map/cslCreatorMap/creatorMap[@zCreator=current()/@baseField] | /map/cslCreatorMap/creatorMap[@zCreator=current()/@value])[1]/@cslCreator"/>
+                </td>
               </tr>
             </xsl:for-each>
           </xsl:if>
