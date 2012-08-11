@@ -237,7 +237,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="interviewee" />
+        <creatorType value="interviewee" baseField="author" />
         <creatorType value="contributor" />
         <creatorType value="interviewer" />
         <creatorType value="translator" />
@@ -262,7 +262,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="director" />
+        <creatorType value="director" baseField="author" />
         <creatorType value="contributor" />
         <creatorType value="producer" />
         <creatorType value="scriptwriter" />
@@ -285,7 +285,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="artist" />
+        <creatorType value="artist" baseField="author" />
         <creatorType value="contributor" />
       </field>
     </typeMap>
@@ -358,7 +358,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="sponsor" />
+        <creatorType value="sponsor" baseField="author" />
         <creatorType value="contributor" />
         <creatorType value="cosponsor" />
       </field>
@@ -405,7 +405,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="contributor" />
+        <creatorType value="contributor" baseField="author" />
       </field>
     </typeMap>
     <typeMap zType="patent" cslType="patent">
@@ -430,7 +430,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="inventor" />
+        <creatorType value="inventor" baseField="author" />
         <creatorType value="attorneyAgent" />
         <creatorType value="contributor" />
       </field>
@@ -495,7 +495,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="cartographer" />
+        <creatorType value="cartographer" baseField="author" />
         <creatorType value="contributor" />
         <creatorType value="seriesEditor" />
       </field>
@@ -574,7 +574,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="performer" />
+        <creatorType value="performer" baseField="author" />
         <creatorType value="composer" />
         <creatorType value="contributor" />
         <creatorType value="wordsBy" />
@@ -594,7 +594,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="presenter" />
+        <creatorType value="presenter" baseField="author" />
         <creatorType value="contributor" />
       </field>
     </typeMap>
@@ -621,7 +621,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="director" />
+        <creatorType value="director" baseField="author" />
         <creatorType value="castMember" />
         <creatorType value="contributor" />
         <creatorType value="producer" />
@@ -649,7 +649,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="director" />
+        <creatorType value="director" baseField="author" />
         <creatorType value="castMember" />
         <creatorType value="contributor" />
         <creatorType value="guest" />
@@ -678,7 +678,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="director" />
+        <creatorType value="director" baseField="author" />
         <creatorType value="castMember" />
         <creatorType value="contributor" />
         <creatorType value="guest" />
@@ -700,7 +700,7 @@
       <field value="rights" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="podcaster" />
+        <creatorType value="podcaster" baseField="author" />
         <creatorType value="contributor" />
         <creatorType value="guest" />
       </field>
@@ -726,7 +726,7 @@
       <field value="accessDate" />
       <field value="extra" />
       <field value="creator">
-        <creatorType value="programmer" />
+        <creatorType value="programmer" baseField="author" />
         <creatorType value="contributor" />
       </field>
     </typeMap>
