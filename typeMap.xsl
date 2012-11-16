@@ -10,6 +10,7 @@
   </head>
   <body>
     <h2><a name="toc">Zotero Item Types</a></h2>
+    <h4>Generated with Zotero <xsl:value-of select="map/zoteroVersion/@value"/> on <xsl:value-of select="map/date/@value"/></h4>
     <table>
       <thead>
           <tr><th>Zotero type</th><th>CSL type</th></tr>
