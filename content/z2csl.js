@@ -15,6 +15,14 @@ Zotero.Z2CSL = {
 	exportMappings: function() {
 		var map = {name:'map', childNodes:[] };
 
+		//add current Zotero version and date of creation
+		map.childNodes.push({ name:'zoteroVersion',
+													attributes: { value: Zotero.version }
+												});
+		map.childNodes.push({ name:'date',
+													attributes: { value: (new Date()).toUTCString()}
+												});
+
 		var type, fields, baseField;
 		var nodes = [];
 
