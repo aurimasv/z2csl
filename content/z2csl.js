@@ -1,4 +1,6 @@
 Zotero.Z2CSL = {
+	cslVars: null,
+
 	init: function() {
 		//load utilities.js so we can fetch the CSL mappings
 		var context = { Zotero: {} };
@@ -92,7 +94,11 @@ Zotero.Z2CSL = {
 		}
 		map.childNodes.push({name:'cslCreatorMap', childNodes:nodes});
 
-		this.writeFile(this.jsonToXML(map));
+		var me = this;
+		this.retrieveCSLVariables(function(cslVars) {
+			map.childNodes.push(cslVars);
+			me.writeFile(me.jsonToXML(map));
+		});
 	},
 
 	writeFile: function(data) {
@@ -122,6 +128,69 @@ Zotero.Z2CSL = {
 			var istream = converter.convertToInputStream(data);
 			NetUtil.asyncCopy(istream, ostream);
 		}
+	},
+
+	retrieveCSLVariables: function(callback) {
+		if(this.cslVars) callback(this.cslVars);
+
+		var url = 'http://citationstyles.org/downloads/specification.html';
+		var me = this;
+
+		Zotero.HTTP.processDocuments(url, function(doc) {
+				var cslVars = { name: 'cslVars', childNodes: [] };
+
+				//types
+				var types = Zotero.Utilities.xpath(doc, '//div[@id="appendix-iii-types"]/ul/li');
+				var t = { name: 'itemTypes', childNodes: [] };
+				for(var i=0, n=types.length; i<n; i++) {
+					t.childNodes.push({
+						name: 'type',
+						attributes: { name: types[i].textContent }
+					});
+				}
+				cslVars.childNodes.push(t);
+				
+				//variables
+				var variables = Zotero.Utilities.xpath(doc, '//div[@id="appendix-iv-variables"]')[0];
+				if(!variables) throw { message: 'Could not locate CSL variables' };
+
+				var varXPath = {
+					standard: './div[@id="standard-variables"]/dl/*[self::dt or self::dd]',
+					number: './/div[@id="number-variables"]/dl/*[self::dt or self::dd]',
+					date: './div[@id="date-variables"]/dl/*[self::dt or self::dd]',
+					name: './div[@id="name-variables"]/dl/*[self::dt or self::dd]'
+				};
+
+				var vars = { name: 'vars', childNodes: [] };
+				for(var v in varXPath) {
+					var vbt = Zotero.Utilities.xpath(variables, varXPath[v]);
+					for(var i=0, n=vbt.length; i<n; i+=2) {
+						vars.childNodes.push({
+							name: 'var',
+							attributes: {
+								name: vbt[i].textContent,
+								type: v,
+								description: me.escapeQuotes(
+									Zotero.Utilities.trimInternal(vbt[i+1].textContent)
+									)
+							}
+						});
+					}
+				}
+				cslVars.childNodes.push(vars);
+
+				me.cslVars = cslVars;
+				callback(cslVars);
+			},
+			null,
+			function(e) {
+				throw e;
+			}
+		);
+	},
+
+	escapeQuotes: function(str) {
+		return str.replace(/"/g, '&quot;');
 	},
 
 	jsonToXML: function(obj, indent) {
