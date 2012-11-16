@@ -2,6 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="typeMap.xsl"?>
 
 <map>
+  <zoteroVersion value="3.0.9.SOURCE" />
+  <date value="Fri, 16 Nov 2012 00:18:44 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -870,9 +872,12 @@
     <fieldMap zField="version" cslField="version" />
     <fieldMap zField="section" cslField="section" />
     <fieldMap zField="type" cslField="genre" />
-    <fieldMap zField="artworkSize" cslField="genre" />
+    <fieldMap zField="libraryCatalog" cslField="source" />
+    <fieldMap zField="artworkSize" cslField="dimension" />
+    <fieldMap zField="runningTime" cslField="dimension" />
     <fieldMap zField="medium" cslField="medium" />
     <fieldMap zField="system" cslField="medium" />
+    <fieldMap zField="scale" cslField="scale" />
     <fieldMap zField="archive" cslField="archive" />
     <fieldMap zField="archiveLocation" cslField="archive_location" />
     <fieldMap zField="meetingName" cslField="event" />
@@ -882,6 +887,7 @@
     <fieldMap zField="url" cslField="URL" />
     <fieldMap zField="DOI" cslField="DOI" />
     <fieldMap zField="ISBN" cslField="ISBN" />
+    <fieldMap zField="ISSN" cslField="ISSN" />
     <fieldMap zField="callNumber" cslField="call-number" />
     <fieldMap zField="extra" cslField="note" />
     <fieldMap zField="number" cslField="number" />
@@ -897,8 +903,10 @@
     <creatorMap zCreator="editor" cslCreator="editor" />
     <creatorMap zCreator="bookAuthor" cslCreator="container-author" />
     <creatorMap zCreator="composer" cslCreator="composer" />
+    <creatorMap zCreator="director" cslCreator="director" />
     <creatorMap zCreator="interviewer" cslCreator="interviewer" />
     <creatorMap zCreator="recipient" cslCreator="recipient" />
+    <creatorMap zCreator="reviewedAuthor" cslCreator="reviewed-author" />
     <creatorMap zCreator="seriesEditor" cslCreator="collection-editor" />
     <creatorMap zCreator="translator" cslCreator="translator" />
   </cslCreatorMap>
