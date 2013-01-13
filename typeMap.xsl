@@ -63,12 +63,15 @@
       <h3><a name="map-{@zType}"><xsl:value-of select="@zType"/> &#x2192; <xsl:value-of select="@cslType"/></a></h3>
       <table>
         <thead>
-            <tr><th>Zotero field</th><th>CSL field</th></tr>
+            <tr><th>UI Label</th><th>Zotero field</th><th>CSL field</th></tr>
         </thead>
         <tbody>
         <xsl:for-each select="field">
         <xsl:sort select="@value"/>
           <tr>
+            <td>
+              <xsl:value-of select="@label"/>
+            </td>
             <td>
               <xsl:value-of select="@value"/>
               <xsl:if test="@baseField"> (<xsl:value-of select="@baseField"/>)</xsl:if>
@@ -83,6 +86,9 @@
             <xsl:for-each select="creatorType">
             <xsl:sort select="@value"/>
               <tr>
+                <td class="zSubType">
+                  <xsl:value-of select="@label"/>
+                </td>
                 <td class="zSubType">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="@baseField"> (<xsl:value-of select="@baseField"/>)</xsl:if>
