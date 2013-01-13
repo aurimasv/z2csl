@@ -40,7 +40,13 @@ Zotero.Z2CSL = {
 			fields = Zotero.ItemFields.getItemTypeFields(this.zoteroTypes[i].id);
 			var fieldMap, baseField;
 			for(var j=0, m=fields.length; j<m; j++) {
-				fieldMap = {name:'field', attributes:{ value:Zotero.ItemFields.getName(fields[j]) } };
+				fieldMap = {
+                    name:'field',
+                    attributes:{
+                        label:Zotero.ItemFields.getLocalizedString(this.zoteroTypes[i].id,fields[j]),
+                        value:Zotero.ItemFields.getName(fields[j])
+                    }
+                };
 
 				//Also retrieve base field so we can map to CSL
 				if(!Zotero.ItemFields.isBaseField(fields[j])) {
@@ -60,7 +66,13 @@ Zotero.Z2CSL = {
 			if(creators.length) {
 				creatorNodes = {name:'field', attributes:{ value:'creator'}, childNodes: []};
 				for(var j=0, m=creators.length; j<m; j++) {
-					creator = {name:'creatorType', attributes:{ value:creators[j].name } };
+					creator = {
+                        name:'creatorType',
+                        attributes:{ 
+                            label:Zotero.getString('creatorTypes.' + creators[j].name),
+                            value:creators[j].name
+                        } 
+                    };
 					//1 is author anyway
 					if(primaryID != 1 && creators[j].id == primaryID) {
 						creator.attributes.baseField = 'author';
