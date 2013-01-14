@@ -95,7 +95,9 @@ Zotero.Z2CSL = {
 
 		//add dates
 		for(f in this.cslDateMap) {
-			nodes.push({name:'fieldMap', attributes:{zField: this.cslDateMap[f], cslField: f}});
+			for(var i=0, n=this.cslDateMap[f].length; i<n; i++) {
+			    nodes.push({name:'fieldMap', attributes:{zField: this.cslDateMap[f][i], cslField: f}});
+			}
 		}
 		map.childNodes.push({name:'cslFieldMap', childNodes:nodes});
 
