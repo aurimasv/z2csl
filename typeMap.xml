@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Mon, 14 Jan 2013 03:25:12 GMT" />
+  <date value="Mon, 14 Jan 2013 04:12:50 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -1078,7 +1078,11 @@
     <fieldMap zField="language" cslField="language" />
     <fieldMap zField="jurisdiction" cslField="jurisdiction" />
     <fieldMap zField="date" cslField="issued" />
+    <fieldMap zField="newsCaseDate" cslField="original-date" />
+    <fieldMap zField="priorityDate" cslField="original-date" />
+    <fieldMap zField="originalDate" cslField="original-date" />
     <fieldMap zField="adoptionDate" cslField="original-date" />
+    <fieldMap zField="dateDecided" cslField="original-date" />
     <fieldMap zField="filingDate" cslField="submitted" />
     <fieldMap zField="accessDate" cslField="accessed" />
     <fieldMap zField="openingDate" cslField="available-date" />
