@@ -162,7 +162,8 @@ Zotero.Z2CSL = {
 	retrieveCSLVariables: function(callback) {
 		if(this.cslVars) callback(this.cslVars);
 
-		var url = 'http://citationstyles.org/downloads/specification.html';
+		//var url = 'http://citationstyles.org/downloads/specification.html';
+		var url = 'file:///home/bennett/src/csl-documentation-clone/specification.html';
 		var me = this;
 
 		Zotero.HTTP.processDocuments(url, function(doc) {
