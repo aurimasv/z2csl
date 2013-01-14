@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Mon, 14 Jan 2013 03:05:34 GMT" />
+  <date value="Mon, 14 Jan 2013 03:17:59 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -1077,42 +1077,13 @@
     <fieldMap zField="journalAbbreviation" cslField="journalAbbreviation" />
     <fieldMap zField="language" cslField="language" />
     <fieldMap zField="jurisdiction" cslField="jurisdiction" />
-    <fieldMap zField="openingDate" cslField="available-date" />
-    <fieldMap zField="originalDate" cslField="original-date" />
-    <fieldMap zField="adoptionDate" cslField="original-date" />
-    <fieldMap zField="dateDecided" cslField="original-date" />
-    <fieldMap zField="s" cslField="event-date" />
-    <fieldMap zField="i" cslField="event-date" />
-    <fieldMap zField="g" cslField="event-date" />
-    <fieldMap zField="n" cslField="event-date" />
-    <fieldMap zField="i" cslField="event-date" />
-    <fieldMap zField="n" cslField="event-date" />
-    <fieldMap zField="g" cslField="event-date" />
-    <fieldMap zField="D" cslField="event-date" />
-    <fieldMap zField="a" cslField="event-date" />
-    <fieldMap zField="t" cslField="event-date" />
-    <fieldMap zField="e" cslField="event-date" />
-    <fieldMap zField="p" cslField="publication-date" />
-    <fieldMap zField="u" cslField="publication-date" />
-    <fieldMap zField="b" cslField="publication-date" />
-    <fieldMap zField="l" cslField="publication-date" />
-    <fieldMap zField="i" cslField="publication-date" />
-    <fieldMap zField="c" cslField="publication-date" />
-    <fieldMap zField="a" cslField="publication-date" />
-    <fieldMap zField="t" cslField="publication-date" />
-    <fieldMap zField="i" cslField="publication-date" />
-    <fieldMap zField="o" cslField="publication-date" />
-    <fieldMap zField="n" cslField="publication-date" />
-    <fieldMap zField="D" cslField="publication-date" />
-    <fieldMap zField="a" cslField="publication-date" />
-    <fieldMap zField="t" cslField="publication-date" />
-    <fieldMap zField="e" cslField="publication-date" />
     <fieldMap zField="date" cslField="issued" />
     <fieldMap zField="adoptionDate" cslField="original-date" />
     <fieldMap zField="filingDate" cslField="submitted" />
     <fieldMap zField="accessDate" cslField="accessed" />
     <fieldMap zField="openingDate" cslField="available-date" />
     <fieldMap zField="signingDate" cslField="event-date" />
+    <fieldMap zField="publicationDate" cslField="publication-date" />
   </cslFieldMap>
   <cslCreatorMap>
     <creatorMap zCreator="artist" cslCreator="author" />
