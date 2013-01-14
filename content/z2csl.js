@@ -188,7 +188,7 @@ Zotero.Z2CSL = {
 					standard: './div[@id="standard-variables"]/dl/*[self::dt or self::dd]',
 					number: './/div[@id="number-variables"]/dl/*[self::dt or self::dd]',
 					date: './div[@id="date-variables"]/dl/*[self::dt or self::dd]',
-					name: './div[@id="name-variables"]/dl/*[self::dt or self::dd]'
+					name: './div[@id="name-variables"]/dl/*[self::dt or self::dd]',
 					mlz: './div[@id="mlz-variables"]/dl/*[self::dt or self::dd]'
 				};
 
