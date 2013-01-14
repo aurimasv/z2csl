@@ -3,9 +3,25 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+<xsl:template name="citeprocRemap">
+	<xsl:param name="cslUsage"/>
+	<xsl:param name="descKey"/>
+			<a href="#cslVar-{$descKey}"><xsl:value-of select="$cslUsage"/></a>
+</xsl:template>
+
 <xsl:template name="cslVarForZField">
 	<xsl:param name="name"/>
-	<a href="#cslVar-{$name}"><xsl:value-of select="$name"/></a>
+	<xsl:choose>
+		<xsl:when test="/map/citeprocJStoCSLmap/remap[@citeprocField=$name]">
+			<xsl:call-template name="citeprocRemap">
+				<xsl:with-param name="cslUsage" select="/map/citeprocJStoCSLmap/remap[@citeprocField=$name]/@cslUsage"/>
+				<xsl:with-param name="descKey" select="/map/citeprocJStoCSLmap/remap[@citeprocField=$name]/@descKey"/>
+			</xsl:call-template>
+		</xsl:when>
+		<xsl:otherwise>
+			<a href="#cslVar-{$name}"><xsl:value-of select="$name"/></a>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template match="/">
@@ -48,7 +64,7 @@
         <xsl:sort select="@name"/>
         <tr>
 	        <td><a name="cslVar-{@name}"><xsl:value-of select="@name"/></a>
-	        	<xsl:if test="not(/map/cslFieldMap/fieldMap[@cslField=current()/@name] | /map/cslCreatorMap/creatorMap[@cslCreator=current()/@name])">*</xsl:if>
+	        	<xsl:if test="not(/map/cslFieldMap/fieldMap[@cslField=current()/@name] | /map/cslCreatorMap/creatorMap[@cslCreator=current()/@name] | /map/citeprocJStoCSLmap/remap[@descKey=current()/@name])">*</xsl:if>
 	        </td>
 	        <td>[<xsl:value-of select="@type"/>] <xsl:value-of select="@description"/></td>
         </tr>
@@ -63,12 +79,15 @@
       <h3><a name="map-{@zType}"><xsl:value-of select="@zType"/> &#x2192; <xsl:value-of select="@cslType"/></a></h3>
       <table>
         <thead>
-            <tr><th>Zotero field</th><th>CSL field</th></tr>
+            <tr><th>UI Label</th><th>Zotero field</th><th>CSL field</th></tr>
         </thead>
         <tbody>
         <xsl:for-each select="field">
         <xsl:sort select="@value"/>
           <tr>
+            <td>
+              <xsl:value-of select="@label"/>
+            </td>
             <td>
               <xsl:value-of select="@value"/>
               <xsl:if test="@baseField"> (<xsl:value-of select="@baseField"/>)</xsl:if>
@@ -83,6 +102,9 @@
             <xsl:for-each select="creatorType">
             <xsl:sort select="@value"/>
               <tr>
+                <td class="zSubType">
+                  <xsl:value-of select="@label"/>
+                </td>
                 <td class="zSubType">
                   <xsl:value-of select="@value"/>
                   <xsl:if test="@baseField"> (<xsl:value-of select="@baseField"/>)</xsl:if>
