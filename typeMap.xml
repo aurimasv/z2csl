@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Mon, 14 Jan 2013 06:10:25 GMT" />
+  <date value="Mon, 14 Jan 2013 06:20:37 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -1072,6 +1072,8 @@
     <fieldMap zField="callNumber" cslField="call-number" />
     <fieldMap zField="extra" cslField="note" />
     <fieldMap zField="number" cslField="number" />
+    <fieldMap zField="priorityNumber" cslField="rank-number" />
+    <fieldMap zField="applicationNumber" cslField="pending-number" />
     <fieldMap zField="history" cslField="references" />
     <fieldMap zField="shortTitle" cslField="shortTitle" />
     <fieldMap zField="journalAbbreviation" cslField="journalAbbreviation" />
@@ -1220,7 +1222,9 @@
       <var name="translator" type="name" description="translator" />
       <var name="available-date" type="mlz" description="date on which a document becomes available for use (e.g. the date a treaty is opened for signing)" />
       <var name="contributor" type="mlz" description="non-standard variable that may be used for special purposes in some styles (e.g. to identify the author if interest in a multi-authored work in publications listings)" />
+      <var name="pending-number" type="mlz" description="number of an application or other executory document (e.g. a patent application)" />
       <var name="publication-date" type="mlz" description="date of secondary publication of offically issued material (e.g. the date of commercial publication of a court decision)" />
+      <var name="rank-number" type="mlz" description="number of position in a queue or hierarchy (e.g. a patent priority number)" />
       <var name="language" type="standard" description="Language code. Not intended for display purposes." />
     </vars>
   </cslVars>
