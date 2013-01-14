@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Mon, 14 Jan 2013 06:27:26 GMT" />
+  <date value="Mon, 14 Jan 2013 22:54:31 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -406,7 +406,7 @@
         <creatorType label="Counsel" value="counsel" />
       </field>
     </typeMap>
-    <typeMap zType="hearing" cslType="bill">
+    <typeMap zType="hearing" cslType="hearing">
       <field label="Title" value="title" />
       <field label="Abstract" value="abstractNote" />
       <field label="Jurisdiction" value="jurisdiction" />
@@ -573,7 +573,7 @@
     <typeMap zType="forumPost" cslType="post">
       <field label="Title" value="title" />
       <field label="Abstract" value="abstractNote" />
-      <field label="Forum/Listserv Title" value="forumTitle" baseField="publicationTitle" />
+      <field label="Forum/Listserv" value="forumTitle" baseField="publicationTitle" />
       <field label="Post Type" value="postType" baseField="type" />
       <field label="Date" value="date" />
       <field label="Language" value="language" />
