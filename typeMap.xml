@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Mon, 14 Jan 2013 06:20:37 GMT" />
+  <date value="Mon, 14 Jan 2013 06:24:24 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -1072,7 +1072,7 @@
     <fieldMap zField="callNumber" cslField="call-number" />
     <fieldMap zField="extra" cslField="note" />
     <fieldMap zField="number" cslField="number" />
-    <fieldMap zField="priorityNumber" cslField="rank-number" />
+    <fieldMap zField="priorityNumbers" cslField="rank-number" />
     <fieldMap zField="applicationNumber" cslField="pending-number" />
     <fieldMap zField="history" cslField="references" />
     <fieldMap zField="shortTitle" cslField="shortTitle" />
