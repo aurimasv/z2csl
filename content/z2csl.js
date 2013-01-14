@@ -41,12 +41,12 @@ Zotero.Z2CSL = {
 			var fieldMap, baseField;
 			for(var j=0, m=fields.length; j<m; j++) {
 				fieldMap = {
-                    name:'field',
-                    attributes:{
-                        label:Zotero.ItemFields.getLocalizedString(this.zoteroTypes[i].id,fields[j]),
-                        value:Zotero.ItemFields.getName(fields[j])
-                    }
-                };
+										name:'field',
+										attributes:{
+												label:Zotero.ItemFields.getLocalizedString(this.zoteroTypes[i].id,fields[j]),
+												value:Zotero.ItemFields.getName(fields[j])
+										}
+								};
 
 				//Also retrieve base field so we can map to CSL
 				if(!Zotero.ItemFields.isBaseField(fields[j])) {
@@ -67,12 +67,12 @@ Zotero.Z2CSL = {
 				creatorNodes = {name:'field', attributes:{ value:'creator'}, childNodes: []};
 				for(var j=0, m=creators.length; j<m; j++) {
 					creator = {
-                        name:'creatorType',
-                        attributes:{ 
-                            label:Zotero.getString('creatorTypes.' + creators[j].name),
-                            value:creators[j].name
-                        } 
-                    };
+												name:'creatorType',
+												attributes:{ 
+														label:Zotero.getString('creatorTypes.' + creators[j].name),
+														value:creators[j].name
+												} 
+										};
 					//1 is author anyway
 					if(primaryID != 1 && creators[j].id == primaryID) {
 						creator.attributes.baseField = 'author';
@@ -105,6 +105,21 @@ Zotero.Z2CSL = {
 			nodes.push({name:'creatorMap', attributes:{zCreator: f, cslCreator: this.cslCreatorMap[f]}});
 		}
 		map.childNodes.push({name:'cslCreatorMap', childNodes:nodes});
+
+		//add internal remapping that occurs within citeproc.js
+		//see http://forums.zotero.org/discussion/26312/csl-variables-used-in-zotero-but-not-in-documentation/
+		nodes = [];
+		nodes.push({ name:'remap', attributes:{
+			citeprocField: 'shortTitle',
+			cslUsage: 'title-short or &lt;text variable=&quot;title&quot; form=&quot;short&quot;/&gt;',
+			descKey: 'title-short'
+		}});
+		nodes.push({ name:'remap', attributes:{
+			citeprocField: 'journalAbbreviation',
+			cslUsage: 'container-title-short or &lt;text variable=&quot;container-title&quot; form=&quot;short&quot;/&gt;',
+			descKey: 'container-title-short'
+		}});
+		map.childNodes.push({name:'citeprocJStoCSLmap', childNodes:nodes});
 
 		var me = this;
 		this.retrieveCSLVariables(function(cslVars) {
@@ -174,10 +189,23 @@ Zotero.Z2CSL = {
 				};
 
 				var vars = { name: 'vars', childNodes: [] };
+				/**
+				 * At the time of writing, the following are not found on citationstyles.org page.
+				 * We add a description to them later, but make sure we don't overwrite or double-up
+				 * on these fields
+				 * see http://forums.zotero.org/discussion/26312/csl-variables-used-in-zotero-but-not-in-documentation/
+				 */
+				var missing = {
+					'language': {
+						type: 'standard',
+						description: 'Language code. Not intended for display purposes.'
+					}
+				};
+				var m, node;
 				for(var v in varXPath) {
 					var vbt = Zotero.Utilities.xpath(variables, varXPath[v]);
 					for(var i=0, n=vbt.length; i<n; i+=2) {
-						vars.childNodes.push({
+						node = {
 							name: 'var',
 							attributes: {
 								name: vbt[i].textContent,
@@ -186,9 +214,29 @@ Zotero.Z2CSL = {
 									Zotero.Utilities.trimInternal(vbt[i+1].textContent)
 									)
 							}
-						});
+						};
+						
+						//remove missing items that were found
+						if(missing[node.attributes.name]) {
+							delete missing[node.attributes.name];
+						}
+						
+						vars.childNodes.push(node);
 					}
 				}
+				
+				//fill in missing fields
+				for(var field in missing) {
+					vars.childNodes.push({
+							name: 'var',
+							attributes: {
+								name: field,
+								type: missing[field].type,
+								description: missing[field].description
+							}
+					});
+				}
+				
 				cslVars.childNodes.push(vars);
 
 				me.cslVars = cslVars;
