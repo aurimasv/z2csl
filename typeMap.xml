@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Mon, 14 Jan 2013 05:49:24 GMT" />
+  <date value="Mon, 14 Jan 2013 06:10:25 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -412,7 +412,7 @@
       <field label="Jurisdiction" value="jurisdiction" />
       <field label="Short Title" value="shortTitle" />
       <field label="Committee" value="committee" />
-      <field label="Meeting No." value="meetingNumber" />
+      <field label="Meeting Name" value="meetingName" />
       <field label="Resol. Label" value="resolutionLabel" />
       <field label="Assy. No." value="assemblyNumber" />
       <field label="Session Type" value="sessionType" baseField="type" />
