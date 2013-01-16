@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Mon, 14 Jan 2013 23:03:40 GMT" />
+  <date value="Wed, 16 Jan 2013 00:16:21 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -360,9 +360,9 @@
       <field label="Date" value="date" />
       <field label="Section" value="section" />
       <field label="Archive Loc." value="archiveLocation" />
-      <field label="Code" value="code" />
-      <field label="Code Volume" value="codeVolume" baseField="volume" />
-      <field label="Code Pages" value="codePages" baseField="pages" />
+      <field label="Reporter" value="code" />
+      <field label="Volume" value="codeVolume" baseField="volume" />
+      <field label="Pages" value="codePages" baseField="pages" />
       <field label="Language" value="language" />
       <field label="URL" value="url" />
       <field label="Accessed" value="accessDate" />
@@ -412,7 +412,7 @@
       <field label="Jurisdiction" value="jurisdiction" />
       <field label="Short Title" value="shortTitle" />
       <field label="Committee" value="committee" />
-      <field label="Meeting Name" value="meetingName" />
+      <field label="Meeting No." value="meetingNumber" />
       <field label="Resol. Label" value="resolutionLabel" />
       <field label="Assy. No." value="assemblyNumber" />
       <field label="Session Type" value="sessionType" baseField="type" />
@@ -429,11 +429,12 @@
       <field label="History" value="history" />
       <field label="Place" value="place" />
       <field label="Legis. Body" value="legislativeBody" />
-      <field label="Document No." value="documentNumber" baseField="number" />
+      <field label="Bill/Doc. No." value="documentNumber" baseField="number" />
       <field label="Rights" value="rights" />
       <field label="Extra" value="extra" />
       <field value="creator">
-        <creatorType label="Contributor" value="contributor" baseField="author" />
+        <creatorType label="Testimony By" value="testimonyBy" baseField="author" />
+        <creatorType label="Contributor" value="contributor" />
       </field>
     </typeMap>
     <typeMap zType="patent" cslType="patent">
@@ -472,7 +473,7 @@
       <field label="Abstract" value="abstractNote" />
       <field label="Jurisdiction" value="jurisdiction" />
       <field label="Code" value="code" />
-      <field label="Code No." value="codeNumber" />
+      <field label="Title No." value="codeNumber" />
       <field label="Pages" value="pages" />
       <field label="Date Enacted" value="dateEnacted" baseField="date" />
       <field label="Section" value="section" />
@@ -637,7 +638,7 @@
         <creatorType label="Contributor" value="contributor" />
       </field>
     </typeMap>
-    <typeMap zType="videoRecording" cslType="motion_picture">
+    <typeMap zType="videoRecording" cslType="video">
       <field label="Title" value="title" />
       <field label="Abstract" value="abstractNote" />
       <field label="Format" value="videoRecordingFormat" baseField="medium" />
@@ -650,6 +651,7 @@
       <field label="Running Time" value="runningTime" />
       <field label="Language" value="language" />
       <field label="ISBN" value="ISBN" />
+      <field label="Website Title" value="websiteTitle" />
       <field label="Short Title" value="shortTitle" />
       <field label="URL" value="url" />
       <field label="Accessed" value="accessDate" />
@@ -895,8 +897,8 @@
       <field label="Jurisdiction" value="jurisdiction" />
       <field label="Short Title" value="shortTitle" />
       <field label="Public Law No." value="publicLawNumber" baseField="number" />
-      <field label="Code" value="code" />
-      <field label="Code No." value="codeNumber" />
+      <field label="Reporter" value="code" />
+      <field label="Volume" value="codeNumber" />
       <field label="Pages" value="pages" />
       <field label="Date Enacted" value="dateEnacted" baseField="date" />
       <field label="Section" value="section" />
@@ -922,7 +924,7 @@
       <field label="Date Opened" value="openingDate" />
       <field label="Date Adopted" value="adoptionDate" />
       <field label="Date Signed" value="signingDate" />
-      <field label="Date" value="date" />
+      <field label="Date In Force" value="date" />
       <field label="Section" value="section" />
       <field label="Language" value="language" />
       <field label="URL" value="url" />
@@ -948,8 +950,8 @@
       <field label="Jurisdiction" value="jurisdiction" />
       <field label="Short Title" value="shortTitle" />
       <field label="Public Law No." value="publicLawNumber" baseField="number" />
-      <field label="Code" value="code" />
-      <field label="Code No." value="codeNumber" />
+      <field label="Reporter" value="code" />
+      <field label="Volume" value="codeNumber" />
       <field label="Pages" value="pages" />
       <field label="Date Enacted" value="dateEnacted" baseField="date" />
       <field label="Section" value="section" />
@@ -1050,7 +1052,7 @@
     <fieldMap zField="supplementName" cslField="genre" />
     <fieldMap zField="sessionType" cslField="genre" />
     <fieldMap zField="session" cslField="chapter-number" />
-    <fieldMap zField="meetingName" cslField="chapter-number" />
+    <fieldMap zField="meetingNumber" cslField="chapter-number" />
     <fieldMap zField="libraryCatalog" cslField="source" />
     <fieldMap zField="artworkSize" cslField="dimensions" />
     <fieldMap zField="runningTime" cslField="dimensions" />
