@@ -12,3 +12,27 @@ td.zSubType {
 	padding-left: 0.7em;
 	background-color: #B0F4F5;
 }
+
+tr.onew td.zSubType {
+    font-weight: bold;
+    font-family: sans;
+    font-size: 95%;
+	background-color:#f0f000;
+}
+
+tr.onew {
+    font-weight: bold;
+    font-family: sans;
+    font-size: 95%;
+    background-color:#ffff00;
+}
+
+td.onew {
+    font-style: italic;
+    background-color:#ffff00;
+}
+
+h3.onew a:after {
+    content: " [NEW]";
+    color:red;
+}

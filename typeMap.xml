@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="3.0.11m317" />
-  <date value="Wed, 16 Jan 2013 00:16:21 GMT" />
+  <date value="Sat, 19 Jan 2013 04:09:32 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -384,7 +384,7 @@
       <field label="Place" value="place" />
       <field label="Docket No." value="docketNumber" baseField="number" />
       <field label="Reporter" value="reporter" baseField="publicationTitle" />
-      <field label="Year As Volume" value="yearAsVolume" />
+      <field label="Year As Vol." value="yearAsVolume" />
       <field label="Reporter Volume" value="reporterVolume" baseField="volume" />
       <field label="First Page" value="firstPage" baseField="pages" />
       <field label="Date Decided" value="dateDecided" baseField="date" />
@@ -413,10 +413,12 @@
       <field label="Short Title" value="shortTitle" />
       <field label="Committee" value="committee" />
       <field label="Meeting No." value="meetingNumber" />
+      <field label="Legis. Body" value="legislativeBody" />
       <field label="Resol. Label" value="resolutionLabel" />
       <field label="Assy. No." value="assemblyNumber" />
       <field label="Session Type" value="sessionType" baseField="type" />
       <field label="Session No." value="session" />
+      <field label="Bill/Doc. No." value="documentNumber" baseField="number" />
       <field label="Date" value="date" />
       <field label="Pages" value="pages" />
       <field label="Archive Loc." value="archiveLocation" />
@@ -428,8 +430,6 @@
       <field label="# of Volumes" value="numberOfVolumes" />
       <field label="History" value="history" />
       <field label="Place" value="place" />
-      <field label="Legis. Body" value="legislativeBody" />
-      <field label="Bill/Doc. No." value="documentNumber" baseField="number" />
       <field label="Rights" value="rights" />
       <field label="Extra" value="extra" />
       <field value="creator">
@@ -477,6 +477,7 @@
       <field label="Pages" value="pages" />
       <field label="Date Enacted" value="dateEnacted" baseField="date" />
       <field label="Section" value="section" />
+      <field label="Public Law No." value="publicLawNumber" baseField="number" />
       <field label="Reign" value="reign" />
       <field label="Regnal Year" value="regnalYear" />
       <field label="Publisher" value="publisher" />
@@ -484,7 +485,6 @@
       <field label="Language" value="language" />
       <field label="URL" value="url" />
       <field label="Accessed" value="accessDate" />
-      <field label="Public Law No." value="publicLawNumber" baseField="number" />
       <field label="Session No." value="session" />
       <field label="History" value="history" />
       <field label="Rights" value="rights" />
@@ -651,8 +651,8 @@
       <field label="Running Time" value="runningTime" />
       <field label="Language" value="language" />
       <field label="ISBN" value="ISBN" />
-      <field label="Website Title" value="websiteTitle" />
       <field label="Short Title" value="shortTitle" />
+      <field label="Website Title" value="websiteTitle" />
       <field label="URL" value="url" />
       <field label="Accessed" value="accessDate" />
       <field label="Archive" value="archive" />
@@ -830,7 +830,7 @@
     <typeMap zType="encyclopediaArticle" cslType="entry-encyclopedia">
       <field label="Title" value="title" />
       <field label="Abstract" value="abstractNote" />
-      <field label="Encyclopedia Title" value="encyclopediaTitle" baseField="publicationTitle" />
+      <field label="Encyclopedia" value="encyclopediaTitle" baseField="publicationTitle" />
       <field label="Series" value="series" />
       <field label="Series No." value="seriesNumber" />
       <field label="Volume" value="volume" />
@@ -862,7 +862,7 @@
     <typeMap zType="dictionaryEntry" cslType="entry-dictionary">
       <field label="Title" value="title" />
       <field label="Abstract" value="abstractNote" />
-      <field label="Dictionary Title" value="dictionaryTitle" baseField="publicationTitle" />
+      <field label="Dictionary" value="dictionaryTitle" baseField="publicationTitle" />
       <field label="Series" value="series" />
       <field label="Series No." value="seriesNumber" />
       <field label="Volume" value="volume" />
@@ -990,29 +990,6 @@
       <field value="creator">
         <creatorType label="Author" value="author" />
         <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Translator" value="translator" />
-      </field>
-    </typeMap>
-    <typeMap zType="periodical" cslType="periodical">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Publisher" value="publisher" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Archive Loc." value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call No." value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
-      <field value="creator">
-        <creatorType label="Author" value="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Reviewed Author" value="reviewedAuthor" />
         <creatorType label="Translator" value="translator" />
       </field>
     </typeMap>
