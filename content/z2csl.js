@@ -3,7 +3,7 @@ Zotero.Z2CSL = {
 
 	init: function() {
 		//load utilities.js so we can fetch the CSL mappings
-		var context = { Zotero: {} };
+		var context = { Zotero: {}, XRegExp: {} };
 		Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
 			.getService(Components.interfaces.mozIJSSubScriptLoader)
 			.loadSubScript("chrome://zotero/content/xpcom/utilities.js", context);
