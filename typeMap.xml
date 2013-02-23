@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="typeMap.xsl"?>
 
 <map>
-  <zoteroVersion value="3.0.11m317" />
-  <date value="Sat, 19 Jan 2013 04:09:32 GMT" />
+  <zoteroVersion value="3.0.12m335" />
+  <date value="Sat, 23 Feb 2013 02:26:19 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -388,6 +388,9 @@
       <field label="Reporter Volume" value="reporterVolume" baseField="volume" />
       <field label="First Page" value="firstPage" baseField="pages" />
       <field label="Date Decided" value="dateDecided" baseField="date" />
+      <field label="Filing Date" value="filingDate" />
+      <field label="Reign" value="reign" />
+      <field label="Call No." value="callNumber" />
       <field label="Publisher" value="publisher" />
       <field label="Date Published" value="publicationDate" />
       <field label="Supp. Name" value="supplementName" />
