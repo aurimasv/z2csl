@@ -12,6 +12,7 @@ Zotero.Z2CSL = {
 		this.cslDateMap = context.CSL_DATE_MAPPINGS;
 		this.cslCreatorMap = context.CSL_NAMES_MAPPINGS;
 		this.zoteroTypes = Zotero.ItemTypes.getTypes();
+        this.zoteroItemTypes = Zotero.ItemTypes;
 	},
 
 	exportMappings: function() {
@@ -32,7 +33,8 @@ Zotero.Z2CSL = {
 			type = {name:'typeMap',
 							attributes:{
 								zType:this.zoteroTypes[i].name,
-								cslType:this.cslTypeMap[this.zoteroTypes[i].name]
+								cslType:this.cslTypeMap[this.zoteroTypes[i].name],
+                                label:this.zoteroItemTypes.getLocalizedString(this.zoteroTypes[i].id)
 							},
 							childNodes:[]
 				};

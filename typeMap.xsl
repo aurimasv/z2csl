@@ -77,7 +77,7 @@
       <hr />
       (<a href="#toc">top</a>)
       <h3><a name="map-{@zType}"><xsl:value-of select="@zType"/> &#x2192; <xsl:value-of select="@cslType"/></a></h3>
-      <table>
+      <table class="type-fields" name="{@zType}" label="{@label}">
         <thead>
             <tr><th>UI Label</th><th>Zotero field</th><th>CSL field</th></tr>
         </thead>
