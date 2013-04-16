@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="typeMap.xsl"?>
 
 <map>
-  <zoteroVersion value="3.0.11.SOURCE" />
-  <date value="Mon, 14 Jan 2013 01:27:38 GMT" />
+  <zoteroVersion value="4.0.5.SOURCE" />
+  <date value="Tue, 16 Apr 2013 07:58:08 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
