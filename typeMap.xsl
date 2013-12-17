@@ -11,17 +11,23 @@
 
 <xsl:template name="cslVarForZField">
 	<xsl:param name="name"/>
-	<xsl:choose>
-		<xsl:when test="/map/citeprocJStoCSLmap/remap[@citeprocField=$name]">
-			<xsl:call-template name="citeprocRemap">
-				<xsl:with-param name="cslUsage" select="/map/citeprocJStoCSLmap/remap[@citeprocField=$name]/@cslUsage"/>
-				<xsl:with-param name="descKey" select="/map/citeprocJStoCSLmap/remap[@citeprocField=$name]/@descKey"/>
-			</xsl:call-template>
-		</xsl:when>
-		<xsl:otherwise>
-			<a href="#cslVar-{$name}"><xsl:value-of select="$name"/></a>
-		</xsl:otherwise>
-	</xsl:choose>
+	<ul class="inline-list">
+		<xsl:for-each select="$name">
+			<li>
+				<xsl:choose>
+					<xsl:when test="/map/citeprocJStoCSLmap/remap[@citeprocField=current()/@cslField]">
+						<xsl:call-template name="citeprocRemap">
+							<xsl:with-param name="cslUsage" select="/map/citeprocJStoCSLmap/remap[@citeprocField=current()/@cslField]/@cslUsage"/>
+							<xsl:with-param name="descKey" select="/map/citeprocJStoCSLmap/remap[@citeprocField=current()/@cslField]/@descKey"/>
+						</xsl:call-template>
+					</xsl:when>
+					<xsl:otherwise>
+						<a href="#cslVar-{@cslField}"><xsl:value-of select="@cslField"/></a>
+					</xsl:otherwise>
+				</xsl:choose>
+			</li>
+		</xsl:for-each>
+	</ul>
 </xsl:template>
 
 <xsl:template match="/">
@@ -64,7 +70,7 @@
         <xsl:sort select="@name"/>
         <tr>
 	        <td><a name="cslVar-{@name}"><xsl:value-of select="@name"/></a>
-	        	<xsl:if test="not(/map/cslFieldMap/fieldMap[@cslField=current()/@name] | /map/cslCreatorMap/creatorMap[@cslCreator=current()/@name] | /map/citeprocJStoCSLmap/remap[@descKey=current()/@name])">*</xsl:if>
+	        	<xsl:if test="not(/map/cslFieldMap/map[@cslField=current()/@name] | /map/cslCreatorMap/map[@cslField=current()/@name] | /map/citeprocJStoCSLmap/remap[@descKey=current()/@name])">*</xsl:if>
 	        </td>
 	        <td>[<xsl:value-of select="@type"/>] <xsl:value-of select="@description"/></td>
         </tr>
@@ -94,7 +100,7 @@
             </td>
             <td>
             <xsl:call-template name="cslVarForZField">
-            	<xsl:with-param name="name" select="(/map/cslFieldMap/fieldMap[@zField=current()/@baseField] | /map/cslFieldMap/fieldMap[@zField=current()/@value])[1]/@cslField"/>
+            	<xsl:with-param name="name" select="/map/cslFieldMap/map[@zField=current()/@baseField] | /map/cslFieldMap/map[not(current()/@baseField) and @zField=current()/@value]"/>
             </xsl:call-template>
             </td>
           </tr>
@@ -111,7 +117,7 @@
                 </td>
                 <td class="zSubType">
                 <xsl:call-template name="cslVarForZField">
-                  <xsl:with-param name="name" select="(/map/cslCreatorMap/creatorMap[@zCreator=current()/@baseField] | /map/cslCreatorMap/creatorMap[@zCreator=current()/@value])[1]/@cslCreator"/>
+                  <xsl:with-param name="name" select="/map/cslCreatorMap/map[@zField=current()/@baseField] | /map/cslCreatorMap/map[not(current()/@baseField) and @zField=current()/@value]"/>
                 </xsl:call-template>
                 </td>
               </tr>
