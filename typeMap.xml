@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="typeMap.xsl"?>
 
 <map>
-  <zoteroVersion value="4.0.5.SOURCE" />
-  <date value="Tue, 16 Apr 2013 07:58:08 GMT" />
+  <zoteroVersion value="4.0.17.SOURCE" />
+  <date value="Tue, 17 Dec 2013 22:23:17 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -852,63 +852,63 @@
     </typeMap>
   </zTypes>
   <cslFieldMap>
-    <fieldMap zField="title" cslField="title" />
-    <fieldMap zField="publicationTitle" cslField="container-title" />
-    <fieldMap zField="reporter" cslField="container-title" />
-    <fieldMap zField="code" cslField="container-title" />
-    <fieldMap zField="seriesTitle" cslField="collection-title" />
-    <fieldMap zField="series" cslField="collection-title" />
-    <fieldMap zField="seriesNumber" cslField="collection-number" />
-    <fieldMap zField="publisher" cslField="publisher" />
-    <fieldMap zField="distributor" cslField="publisher" />
-    <fieldMap zField="place" cslField="publisher-place" />
-    <fieldMap zField="court" cslField="authority" />
-    <fieldMap zField="pages" cslField="page" />
-    <fieldMap zField="volume" cslField="volume" />
-    <fieldMap zField="issue" cslField="issue" />
-    <fieldMap zField="numberOfVolumes" cslField="number-of-volumes" />
-    <fieldMap zField="numPages" cslField="number-of-pages" />
-    <fieldMap zField="edition" cslField="edition" />
-    <fieldMap zField="version" cslField="version" />
-    <fieldMap zField="section" cslField="section" />
-    <fieldMap zField="type" cslField="genre" />
-    <fieldMap zField="libraryCatalog" cslField="source" />
-    <fieldMap zField="artworkSize" cslField="dimensions" />
-    <fieldMap zField="runningTime" cslField="dimensions" />
-    <fieldMap zField="medium" cslField="medium" />
-    <fieldMap zField="system" cslField="medium" />
-    <fieldMap zField="scale" cslField="scale" />
-    <fieldMap zField="archive" cslField="archive" />
-    <fieldMap zField="archiveLocation" cslField="archive_location" />
-    <fieldMap zField="meetingName" cslField="event" />
-    <fieldMap zField="conferenceName" cslField="event" />
-    <fieldMap zField="place" cslField="event-place" />
-    <fieldMap zField="abstractNote" cslField="abstract" />
-    <fieldMap zField="url" cslField="URL" />
-    <fieldMap zField="DOI" cslField="DOI" />
-    <fieldMap zField="ISBN" cslField="ISBN" />
-    <fieldMap zField="ISSN" cslField="ISSN" />
-    <fieldMap zField="callNumber" cslField="call-number" />
-    <fieldMap zField="extra" cslField="note" />
-    <fieldMap zField="number" cslField="number" />
-    <fieldMap zField="history" cslField="references" />
-    <fieldMap zField="shortTitle" cslField="shortTitle" />
-    <fieldMap zField="journalAbbreviation" cslField="journalAbbreviation" />
-    <fieldMap zField="language" cslField="language" />
-    <fieldMap zField="date" cslField="issued" />
-    <fieldMap zField="accessDate" cslField="accessed" />
+    <map zField="title" cslField="title" />
+    <map zField="publicationTitle" cslField="container-title" />
+    <map zField="reporter" cslField="container-title" />
+    <map zField="code" cslField="container-title" />
+    <map zField="seriesTitle" cslField="collection-title" />
+    <map zField="series" cslField="collection-title" />
+    <map zField="seriesNumber" cslField="collection-number" />
+    <map zField="publisher" cslField="publisher" />
+    <map zField="distributor" cslField="publisher" />
+    <map zField="place" cslField="publisher-place" />
+    <map zField="court" cslField="authority" />
+    <map zField="pages" cslField="page" />
+    <map zField="volume" cslField="volume" />
+    <map zField="issue" cslField="issue" />
+    <map zField="numberOfVolumes" cslField="number-of-volumes" />
+    <map zField="numPages" cslField="number-of-pages" />
+    <map zField="edition" cslField="edition" />
+    <map zField="version" cslField="version" />
+    <map zField="section" cslField="section" />
+    <map zField="type" cslField="genre" />
+    <map zField="libraryCatalog" cslField="source" />
+    <map zField="artworkSize" cslField="dimensions" />
+    <map zField="runningTime" cslField="dimensions" />
+    <map zField="medium" cslField="medium" />
+    <map zField="system" cslField="medium" />
+    <map zField="scale" cslField="scale" />
+    <map zField="archive" cslField="archive" />
+    <map zField="archiveLocation" cslField="archive_location" />
+    <map zField="meetingName" cslField="event" />
+    <map zField="conferenceName" cslField="event" />
+    <map zField="place" cslField="event-place" />
+    <map zField="abstractNote" cslField="abstract" />
+    <map zField="url" cslField="URL" />
+    <map zField="DOI" cslField="DOI" />
+    <map zField="ISBN" cslField="ISBN" />
+    <map zField="ISSN" cslField="ISSN" />
+    <map zField="callNumber" cslField="call-number" />
+    <map zField="extra" cslField="note" />
+    <map zField="number" cslField="number" />
+    <map zField="history" cslField="references" />
+    <map zField="shortTitle" cslField="shortTitle" />
+    <map zField="journalAbbreviation" cslField="journalAbbreviation" />
+    <map zField="language" cslField="language" />
+    <map zField="date" cslField="issued" />
+    <map zField="accessDate" cslField="accessed" />
   </cslFieldMap>
   <cslCreatorMap>
-    <creatorMap zCreator="author" cslCreator="author" />
-    <creatorMap zCreator="editor" cslCreator="editor" />
-    <creatorMap zCreator="bookAuthor" cslCreator="container-author" />
-    <creatorMap zCreator="composer" cslCreator="composer" />
-    <creatorMap zCreator="director" cslCreator="director" />
-    <creatorMap zCreator="interviewer" cslCreator="interviewer" />
-    <creatorMap zCreator="recipient" cslCreator="recipient" />
-    <creatorMap zCreator="reviewedAuthor" cslCreator="reviewed-author" />
-    <creatorMap zCreator="seriesEditor" cslCreator="collection-editor" />
-    <creatorMap zCreator="translator" cslCreator="translator" />
+    <map zField="author" cslField="author" />
+    <map zField="editor" cslField="editor" />
+    <map zField="bookAuthor" cslField="container-author" />
+    <map zField="composer" cslField="composer" />
+    <map zField="director" cslField="director" />
+    <map zField="interviewer" cslField="interviewer" />
+    <map zField="recipient" cslField="recipient" />
+    <map zField="reviewedAuthor" cslField="reviewed-author" />
+    <map zField="seriesEditor" cslField="collection-editor" />
+    <map zField="translator" cslField="translator" />
   </cslCreatorMap>
   <citeprocJStoCSLmap>
     <remap citeprocField="shortTitle" cslUsage="title-short or &lt;text variable=&quot;title&quot; form=&quot;short&quot;/&gt;" descKey="title-short" />
