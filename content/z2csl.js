@@ -16,7 +16,9 @@ Zotero.Z2CSL = {
 
 	exportMappings: function() {
 		var map = {name:'map', childNodes:[] };
-
+		
+		this.debug("Compiling header...");
+		
 		//add current Zotero version and date of creation
 		map.childNodes.push({ name:'zoteroVersion',
 													attributes: { value: Zotero.version }
@@ -27,7 +29,9 @@ Zotero.Z2CSL = {
 
 		var type, fields, baseField;
 		var nodes = [];
-
+		
+		this.debug("Creating item type map...");
+		
 		for(var i=0, n=this.zoteroTypes.length; i<n; i++) {
 			type = {name:'typeMap',
 							attributes:{
@@ -36,7 +40,8 @@ Zotero.Z2CSL = {
 							},
 							childNodes:[]
 				};
-
+				
+			this.debug("* Adding fields for " + this.zoteroTypes[i].name);
 			fields = Zotero.ItemFields.getItemTypeFields(this.zoteroTypes[i].id);
 			var fieldMap, baseField;
 			for(var j=0, m=fields.length; j<m; j++) {
@@ -60,6 +65,7 @@ Zotero.Z2CSL = {
 			}
 
 			//add valid creator types
+			this.debug("* Adding creator types");
 			var creators = Zotero.CreatorTypes.getTypesForItemType(this.zoteroTypes[i].id);
 			var primaryID = Zotero.CreatorTypes.getPrimaryIDForType(this.zoteroTypes[i].id);
 			var creator, creatorNodes;
@@ -85,29 +91,33 @@ Zotero.Z2CSL = {
 		}
 		map.childNodes.push({name:'zTypes', childNodes:nodes}) ;
 
+		this.debug("Mapping zotero fields to CSL...");
 		nodes = [];
 		var f;
 		for(f in this.cslFieldMap) {
 			for(var i=0, n=this.cslFieldMap[f].length; i<n; i++) {
-				nodes.push({name:'fieldMap', attributes:{zField: this.cslFieldMap[f][i], cslField: f}});
+				nodes.push({name:'map', attributes:{zField: this.cslFieldMap[f][i], cslField: f}});
 			}
 		}
 
 		//add dates
+		this.debug("...adding date fields...");
 		for(f in this.cslDateMap) {
-			nodes.push({name:'fieldMap', attributes:{zField: this.cslDateMap[f], cslField: f}});
+			nodes.push({name:'map', attributes:{zField: this.cslDateMap[f], cslField: f}});
 		}
 		map.childNodes.push({name:'cslFieldMap', childNodes:nodes});
 
 		//add csl creator map
+		this.debug("Mapping creators...");
 		nodes = [];
 		for(f in this.cslCreatorMap) {
-			nodes.push({name:'creatorMap', attributes:{zCreator: f, cslCreator: this.cslCreatorMap[f]}});
+			nodes.push({name:'map', attributes:{zField: f, cslField: this.cslCreatorMap[f]}});
 		}
 		map.childNodes.push({name:'cslCreatorMap', childNodes:nodes});
 
 		//add internal remapping that occurs within citeproc.js
 		//see http://forums.zotero.org/discussion/26312/csl-variables-used-in-zotero-but-not-in-documentation/
+		this.debug("Adding re-mappings...");
 		nodes = [];
 		nodes.push({ name:'remap', attributes:{
 			citeprocField: 'shortTitle',
@@ -121,6 +131,7 @@ Zotero.Z2CSL = {
 		}});
 		map.childNodes.push({name:'citeprocJStoCSLmap', childNodes:nodes});
 
+		this.debug("Fetching CSL variable descriptions...");
 		var me = this;
 		this.retrieveCSLVariables(function(cslVars) {
 			map.childNodes.push(cslVars);
@@ -130,6 +141,7 @@ Zotero.Z2CSL = {
 
 	writeFile: function(data) {
 		//output XML data
+		this.debug("Opening File Picker...");
 		Components.utils.import("resource://gre/modules/NetUtil.jsm");
 		Components.utils.import("resource://gre/modules/FileUtils.jsm"); 
 
@@ -146,6 +158,7 @@ Zotero.Z2CSL = {
 		var res = fp.show();
 
 		if (res != nsIFilePicker.returnCancel){
+			this.debug("Writing data to file...");
 			var file = fp.file;
 			var ostream = FileUtils.openSafeFileOutputStream(file)
 
@@ -155,6 +168,7 @@ Zotero.Z2CSL = {
 			var istream = converter.convertToInputStream(data);
 			NetUtil.asyncCopy(istream, ostream);
 		}
+		this.debug("Done");
 	},
 
 	retrieveCSLVariables: function(callback) {
@@ -164,10 +178,13 @@ Zotero.Z2CSL = {
 		var me = this;
 
 		Zotero.HTTP.processDocuments(url, function(doc) {
+				me.debug("...got data from server...");
 				var cslVars = { name: 'cslVars', childNodes: [] };
 
+				var namespaces = {"xhtml": "http://www.w3.org/1999/xhtml"};
 				//types
-				var types = Zotero.Utilities.xpath(doc, '//div[@id="appendix-iii-types"]/ul/li');
+				me.debug("* getting type descriptions...");
+				var types = Zotero.Utilities.xpath(doc, '//xhtml:div[@id="appendix-iii-types"]/xhtml:ul/xhtml:li', namespaces);
 				var t = { name: 'itemTypes', childNodes: [] };
 				for(var i=0, n=types.length; i<n; i++) {
 					t.childNodes.push({
@@ -178,14 +195,15 @@ Zotero.Z2CSL = {
 				cslVars.childNodes.push(t);
 				
 				//variables
-				var variables = Zotero.Utilities.xpath(doc, '//div[@id="appendix-iv-variables"]')[0];
-				if(!variables) throw { message: 'Could not locate CSL variables' };
+				me.debug("* getting variable descriptions...");
+				var variables = Zotero.Utilities.xpath(doc, '//xhtml:div[@id="appendix-iv-variables"]', namespaces)[0];
+				if(!variables) throw new Error('Could not locate CSL variables');
 
 				var varXPath = {
-					standard: './div[@id="standard-variables"]/dl/*[self::dt or self::dd]',
-					number: './/div[@id="number-variables"]/dl/*[self::dt or self::dd]',
-					date: './div[@id="date-variables"]/dl/*[self::dt or self::dd]',
-					name: './div[@id="name-variables"]/dl/*[self::dt or self::dd]'
+					standard: './xhtml:div[@id="standard-variables"]/xhtml:dl/*[self::xhtml:dt or self::xhtml:dd]',
+					number: './/xhtml:div[@id="number-variables"]/xhtml:dl/*[self::xhtml:dt or self::xhtml:dd]',
+					date: './xhtml:div[@id="date-variables"]/xhtml:dl/*[self::xhtml:dt or self::xhtml:dd]',
+					name: './xhtml:div[@id="name-variables"]/xhtml:dl/*[self::xhtml:dt or self::xhtml:dd]'
 				};
 
 				var vars = { name: 'vars', childNodes: [] };
@@ -195,6 +213,7 @@ Zotero.Z2CSL = {
 				 * on these fields
 				 * see http://forums.zotero.org/discussion/26312/csl-variables-used-in-zotero-but-not-in-documentation/
 				 */
+				me.debug("* adding missing descriptions...");
 				var missing = {
 					'language': {
 						type: 'standard',
@@ -203,7 +222,7 @@ Zotero.Z2CSL = {
 				};
 				var m, node;
 				for(var v in varXPath) {
-					var vbt = Zotero.Utilities.xpath(variables, varXPath[v]);
+					var vbt = Zotero.Utilities.xpath(variables, varXPath[v], namespaces);
 					for(var i=0, n=vbt.length; i<n; i+=2) {
 						node = {
 							name: 'var',
@@ -303,6 +322,10 @@ Zotero.Z2CSL = {
 		} else {
 			return '' + obj;
 		}
+	},
+	
+	debug: function(msg) {
+		Zotero.debug("z2csl: " + msg);
 	}
 };
 
