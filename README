@@ -1,1 +1,31 @@
-This Zotero extension adds an option to the Zotero Actions (gear) menu to export item and field mappings from Zotero to Citation Style Language (CSL). The mappings are in xml format and work with typeMap.xsl and typeMap.css files (found in the extension directory) to create a usable page.
+This Firefox extension for Multilingual Zotero is adapted from the original
+done for Zotero by Aurimas Vickencinus.
+
+The extension adds an option to the Zotero or MLZ Actions (gear) menu to
+export item and field mappings from Zotero to Citation Style Language
+(CSL). The mappings are in xml format and work with typeMap.xsl and
+typeMap.css files (found in the extension directory) to create a
+usable page.
+
+This plugin has been modified, and should be used only to generate
+the mappings page for MLZ.
+
+The plugin expects a directory 'csl-documentation-clone' in a specific
+location on the local filesystem. To change the directory, modify the
+source and rebuild the plugin.
+
+The steps to generate a page are as follows:
+
+1. Install the plugin in a Firefox instance that has Zotero. Run z2csl
+   and save the XML file to the source directory as "zoteroTypeMap.xml".
+
+2. Install the plugin in a Firefox instance that has MLZ. Run z2csl
+   and save the XML file to the source directory as "mlzTypeMap.xml".
+
+3. Run xsltproc typeMap.xml zoteroTypeMap.xml > zoteroPage.html
+
+4. Run xsltproc typeMap.xml mlzTypeMap.xml > mlzPage.html
+
+5. Run mergePages.py zoteroPage.html mlzPage.html > page.html
+
+FB
