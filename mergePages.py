@@ -6,12 +6,12 @@ import sys,re
 
 class Pages:
 
-    def __init__(self, old_page="oldpage.html", new_page="newpage.html", output_page="page.html"):
+    def __init__(self, old_page="zoteroPage.html", new_page="mlzPage.html", output_page="page.html"):
         self.old_page = old_page
         self.new_page = new_page
         self.output_page = output_page
         self.typedata = {}
-        self.doc = html.parse("newpage.html")
+        self.doc = html.parse("mlzPage.html")
     
     def readOldData(self):
         doc = html.parse(self.old_page)
@@ -41,7 +41,7 @@ class Pages:
                 tagcount += 1
 
     def putOldDataInNewPage(self):
-        self.doc = html.parse("newpage.html")
+        self.doc = html.parse("mlzPage.html")
         elems = self.doc.xpath("//h3[following-sibling::table]|//h3/following-sibling::table//tr/td");
         start = False
         firstrow = True
