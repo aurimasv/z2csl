@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl" href="typeMap.xsl"?>
 
 <map>
-  <zoteroVersion value="4.0.17.SOURCE" />
-  <date value="Tue, 17 Dec 2013 22:23:17 GMT" />
+  <zoteroVersion value="4.0.21.SOURCE" />
+  <date value="Tue, 17 Jun 2014 21:11:43 GMT" />
   <zTypes>
     <typeMap zType="note" cslType="">
     </typeMap>
@@ -863,15 +863,21 @@
     <map zField="distributor" cslField="publisher" />
     <map zField="place" cslField="publisher-place" />
     <map zField="court" cslField="authority" />
+    <map zField="legislativeBody" cslField="authority" />
+    <map zField="issuingAuthority" cslField="authority" />
     <map zField="pages" cslField="page" />
     <map zField="volume" cslField="volume" />
+    <map zField="codeNumber" cslField="volume" />
     <map zField="issue" cslField="issue" />
+    <map zField="priorityNumbers" cslField="issue" />
     <map zField="numberOfVolumes" cslField="number-of-volumes" />
     <map zField="numPages" cslField="number-of-pages" />
     <map zField="edition" cslField="edition" />
     <map zField="version" cslField="version" />
     <map zField="section" cslField="section" />
+    <map zField="committee" cslField="section" />
     <map zField="type" cslField="genre" />
+    <map zField="programmingLanguage" cslField="genre" />
     <map zField="libraryCatalog" cslField="source" />
     <map zField="artworkSize" cslField="dimensions" />
     <map zField="runningTime" cslField="dimensions" />
@@ -889,14 +895,19 @@
     <map zField="ISBN" cslField="ISBN" />
     <map zField="ISSN" cslField="ISSN" />
     <map zField="callNumber" cslField="call-number" />
+    <map zField="applicationNumber" cslField="call-number" />
     <map zField="extra" cslField="note" />
     <map zField="number" cslField="number" />
+    <map zField="session" cslField="chapter-number" />
     <map zField="history" cslField="references" />
+    <map zField="references" cslField="references" />
     <map zField="shortTitle" cslField="shortTitle" />
     <map zField="journalAbbreviation" cslField="journalAbbreviation" />
+    <map zField="legalStatus" cslField="status" />
     <map zField="language" cslField="language" />
     <map zField="date" cslField="issued" />
     <map zField="accessDate" cslField="accessed" />
+    <map zField="filingDate" cslField="submitted" />
   </cslFieldMap>
   <cslCreatorMap>
     <map zField="author" cslField="author" />
