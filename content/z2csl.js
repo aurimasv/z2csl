@@ -9,6 +9,11 @@ Zotero.Z2CSL = {
 			.loadSubScript("chrome://zotero/content/xpcom/utilities.js", context);
 		this.cslTypeMap = context.CSL_TYPE_MAPPINGS;
 		this.cslFieldMap = context.CSL_TEXT_MAPPINGS;
+		if (Zotero.version.charAt(0)<5) {
+			// In Zotero 4.0 version instead of versionNumber is used
+			// see https://github.com/zotero/zotero/blob/4.0/chrome/content/zotero/xpcom/utilities.js#L1515
+			this.cslFieldMap["version"] = ["version"];
+		}
 		this.cslDateMap = context.CSL_DATE_MAPPINGS;
 		this.cslCreatorMap = context.CSL_NAMES_MAPPINGS;
 		this.zoteroTypes = Zotero.ItemTypes.getTypes();
