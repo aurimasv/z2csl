@@ -9,8 +9,6 @@ The mappings are in xml format and work with [typeMap.xsl](typeMap.xsl) and [typ
 ### XML Format
 
 The [typeMap.xml](typeMap.xml) has several top-level nodes: Some metadata about the generation is saved in `zoteroVersion` and `date`; `zTypes` list the fields for each Zotero type; the actual mapping between Zotero fields and CSL fields is saved in `cslFieldMap` and `cslCreaterMap` with additions from `citeProcJStoCSLmap`; and `cslVars` lists all CSL variables with descriptions.
- 
-See also [this diagram](doc/z2csl.svg).
 
 ## Extension
 
