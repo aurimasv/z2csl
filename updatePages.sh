@@ -24,6 +24,4 @@ if [[ ! -z "$status" ]]; then
 fi
 
 git add typeMap.css typeMap.xml typeMap.xsl
-git commit -m "Update $(date)"
-
-git checkout "$BRANCH"
+git commit -m "Update $(date)" -m "From branch $BRANCH"
