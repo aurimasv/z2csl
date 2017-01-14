@@ -2,8 +2,11 @@
 
 # ------
 # This updates the typeMap files in the gh-pages branch
-# with the version form the master branch.
+# with the version from the current branch.
 # ------
+
+BRANCH=$(git symbolic-ref --short HEAD)
+echo "$BRANCH"
 
 status=$(git status | grep 'working directory clean')
 if [[ -z "$status" ]]; then
@@ -12,7 +15,7 @@ if [[ -z "$status" ]]; then
 fi
 
 git checkout gh-pages
-git checkout master typeMap.css typeMap.xml typeMap.xsl
+git checkout "$BRANCH" typeMap.css typeMap.xml typeMap.xsl
 
 status=$(git status | grep 'working directory clean')
 if [[ ! -z "$status" ]]; then
@@ -23,4 +26,4 @@ fi
 git add typeMap.css typeMap.xml typeMap.xsl
 git commit -m "Update $(date)"
 
-git checkout master
+git checkout "$BRANCH"
