@@ -1,2 +1,2 @@
 content	z2csl	content/
-overlay	chrome://zotero/content/zoteroPane.xul	chrome://z2csl/content/overlay.xul
+overlay	chrome://zotero/content/standalone/standalone.xul	chrome://z2csl/content/overlay.xul application=zotero@chnm.gmu.edu
