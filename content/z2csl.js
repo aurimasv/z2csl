@@ -16,7 +16,6 @@ Zotero.Z2CSL = {
 		}
 		this.cslDateMap = context.CSL_DATE_MAPPINGS;
 		this.cslCreatorMap = context.CSL_NAMES_MAPPINGS;
-		this.zoteroTypes = Zotero.ItemTypes.getTypes();
 	},
 
 	exportMappings: function() {
@@ -37,6 +36,7 @@ Zotero.Z2CSL = {
 		
 		this.debug("Creating item type map...");
 		
+		this.zoteroTypes = Zotero.ItemTypes.getTypes();
 		for(var i=0, n=this.zoteroTypes.length; i<n; i++) {
 			type = {name:'typeMap',
 							attributes:{
@@ -179,7 +179,7 @@ Zotero.Z2CSL = {
 	retrieveCSLVariables: function(callback) {
 		if(this.cslVars) callback(this.cslVars);
 
-		var url = 'http://citationstyles.org/downloads/specification.html';
+		var url = 'http://docs.citationstyles.org/en/1.0.1/specification.html';
 		var me = this;
 
 		Zotero.HTTP.processDocuments(url, function(doc) {
