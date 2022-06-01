@@ -153,7 +153,9 @@ Zotero.Z2CSL = {
 		//output XML data
 		this.debug("Opening File Picker...");
 		
-		var FilePicker = require('zotero/filePicker').default;
+		const FilePicker = require('zotero/filePicker').default;
+		this.debug("fp set")
+	
 		Components.utils.import("resource://gre/modules/NetUtil.jsm");
 		Components.utils.import("resource://gre/modules/FileUtils.jsm");
 
@@ -184,20 +186,30 @@ Zotero.Z2CSL = {
 		let fp = new FilePicker();
 	  fp.init(window, "Select a file to save to", fp.modeSave);
 		fp.appendFilters(fp.filterAll);
+		// fp.appendFilters("XML", ".xml");
 		
 		let res = await fp.show();
 		if (res != fp.returnCancel) {
 			this.debug("Writing data to file...");
 			this.debug(data)
 			var file = fp.file;
-			var ostream = FileUtils.openSafeFileOutputStream(file)
+			
+			this.debug("trying fs")
+			const fs = require('fs');
+			this.debug("fs set")
+			/*var ostream = FileUtils.openSafeFileOutputStream(file)
 
 			var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
 										 createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
 			converter.charset = "UTF-8";
 			var istream = converter.convertToInputStream(data);
 			this.debug("NetUtil")
-			NetUtil.asyncCopy(istream, ostream);
+			NetUtil.asyncCopy(istream, ostream); */
+			fs.writeFile(file, data, err =>{
+				if (err) {
+					this.debug(err);
+				}
+			})
 
 		}
 
