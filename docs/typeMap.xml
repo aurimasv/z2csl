@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="typeMap.xsl"?>
 <map>
   <zoteroVersion value="6.0.9-beta.3+d12f3eda6"/>
-  <date value="Wed, 01 Jun 2022 14:31:26 GMT"/>
+  <date value="Wed, 01 Jun 2022 15:06:26 GMT"/>
   <zTypes>
     <typeMap zType="artwork" cslType="graphic">
       <field label="Title" value="title"/>
@@ -938,7 +938,18 @@
     <map zField="date" cslField="issued"/>
     <map zField="filingDate" cslField="submitted"/>
   </cslFieldMap>
-  <cslCreatorMap> </cslCreatorMap>
+  <cslCreatorMap>
+    <map zField="author" cslField="author"/>
+    <map zField="bookAuthor" cslField="container-author"/>
+    <map zField="composer" cslField="composer"/>
+    <map zField="director" cslField="director"/>
+    <map zField="editor" cslField="editor"/>
+    <map zField="interviewer" cslField="interviewer"/>
+    <map zField="recipient" cslField="recipient"/>
+    <map zField="reviewedAuthor" cslField="reviewed-author"/>
+    <map zField="seriesEditor" cslField="collection-editor"/>
+    <map zField="translator" cslField="translator"/>
+  </cslCreatorMap>
   <citeprocJStoCSLmap>
     <remap citeprocField="shortTitle" cslUsage="title-short or &lt;text variable=&quot;title&quot; form=&quot;short&quot;/&gt;" descKey="title-short"/>
     <remap citeprocField="journalAbbreviation" cslUsage="container-title-short or &lt;text variable=&quot;container-title&quot; form=&quot;short&quot;/&gt;" descKey="container-title-short"/>
