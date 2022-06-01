@@ -10,23 +10,6 @@
     <em:description>Produces Zotero to CSL type and field map</em:description>
     <em:creator>Aurimas Vinckevicius</em:creator>
 
-<<<<<<< Updated upstream
-		<!-- Requires Firefox or Zotero Standalone -->
-		<em:targetApplication>
-			<Description>
-				<em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
-				<em:minVersion>3.6</em:minVersion>
-				<em:maxVersion>20.*</em:maxVersion>
-			</Description>
-		</em:targetApplication>
-		<em:targetApplication>
-			<Description>
-				<em:id>zotero@chnm.gmu.edu</em:id>
-				<em:minVersion>3.0</em:minVersion>
-				<em:maxVersion>4.0.*</em:maxVersion>
-			</Description>
-		</em:targetApplication>
-=======
     <em:targetApplication>
       <Description>
         <em:id>zotero@chnm.gmu.edu</em:id>
@@ -34,7 +17,6 @@
         <em:maxVersion>6.*</em:maxVersion>
       </Description>
     </em:targetApplication>
->>>>>>> Stashed changes
 
   </Description>
 

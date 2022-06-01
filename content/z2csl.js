@@ -19,14 +19,10 @@ Zotero.Z2CSL = {
 			// see https://github.com/zotero/zotero/blob/4.0/chrome/content/zotero/xpcom/utilities.js#L1515
 			this.cslFieldMap["version"] = ["version"];
 		}
-<<<<<<< Updated upstream
-		this.cslDateMap = context.CSL_DATE_MAPPINGS;
-		this.cslCreatorMap = context.CSL_NAMES_MAPPINGS;
+
 		this.zoteroTypes = Zotero.ItemTypes.getTypes();
-=======
 		this.cslDateMap = Zotero.Schema.CSL_DATE_MAPPINGS;
 		this.cslCreatorMap = Zotero.Schema.CSL_NAMES_MAPPINGS;
->>>>>>> Stashed changes
 	},
 
 	exportMappings: function() {
@@ -46,12 +42,6 @@ Zotero.Z2CSL = {
 		var nodes = [];
 		
 		this.debug("Creating item type map...");
-<<<<<<< Updated upstream
-		
-=======
-		this.debug("Checking on debug")
-		this.zoteroTypes = Zotero.ItemTypes.getTypes();
->>>>>>> Stashed changes
 		for(var i=0, n=this.zoteroTypes.length; i<n; i++) {
 			type = {name:'typeMap',
 							attributes:{
@@ -217,11 +207,8 @@ Zotero.Z2CSL = {
 	retrieveCSLVariables: function(callback) {
 		if(this.cslVars) callback(this.cslVars);
 
-<<<<<<< Updated upstream
-		var url = 'http://citationstyles.org/downloads/specification.html';
-=======
+
 		var url = 'https://docs.citationstyles.org/en/stable/specification.html';
->>>>>>> Stashed changes
 		var me = this;
 
 		Zotero.HTTP.processDocuments(url, function(doc) {
