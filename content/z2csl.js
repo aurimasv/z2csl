@@ -6,17 +6,27 @@ Zotero.Z2CSL = {
 		var context = { Zotero: {}, XRegExp: {} };
 		Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
 			.getService(Components.interfaces.mozIJSSubScriptLoader)
-			.loadSubScript("chrome://zotero/content/xpcom/utilities.js", context);
-		this.cslTypeMap = context.CSL_TYPE_MAPPINGS;
-		this.cslFieldMap = context.CSL_TEXT_MAPPINGS;
+			.loadSubScript("chrome://zotero/content/xpcom/utilities/schema.js", context);
+		this.debug(context)
+		this.cslTypeMap = Zotero.Schema.CSL_TYPE_MAPPINGS;
+		this.debug("starting z2scl")
+		
+		
+		this.debug(Zotero.Schema.CSL_TYPE_MAPPINGS);
+		this.cslFieldMap = Zotero.Schema.CSL_TEXT_MAPPINGS;
 		if (Zotero.version.charAt(0)<5) {
 			// In Zotero 4.0 version instead of versionNumber is used
 			// see https://github.com/zotero/zotero/blob/4.0/chrome/content/zotero/xpcom/utilities.js#L1515
 			this.cslFieldMap["version"] = ["version"];
 		}
+<<<<<<< Updated upstream
 		this.cslDateMap = context.CSL_DATE_MAPPINGS;
 		this.cslCreatorMap = context.CSL_NAMES_MAPPINGS;
 		this.zoteroTypes = Zotero.ItemTypes.getTypes();
+=======
+		this.cslDateMap = Zotero.Schema.CSL_DATE_MAPPINGS;
+		this.cslCreatorMap = Zotero.Schema.CSL_NAMES_MAPPINGS;
+>>>>>>> Stashed changes
 	},
 
 	exportMappings: function() {
@@ -36,7 +46,12 @@ Zotero.Z2CSL = {
 		var nodes = [];
 		
 		this.debug("Creating item type map...");
+<<<<<<< Updated upstream
 		
+=======
+		this.debug("Checking on debug")
+		this.zoteroTypes = Zotero.ItemTypes.getTypes();
+>>>>>>> Stashed changes
 		for(var i=0, n=this.zoteroTypes.length; i<n; i++) {
 			type = {name:'typeMap',
 							attributes:{
@@ -79,10 +94,10 @@ Zotero.Z2CSL = {
 				for(var j=0, m=creators.length; j<m; j++) {
 					creator = {
 												name:'creatorType',
-												attributes:{ 
+												attributes:{
 														label:Zotero.getString('creatorTypes.' + creators[j].name),
 														value:creators[j].name
-												} 
+												}
 										};
 					//1 is author anyway
 					if(primaryID != 1 && creators[j].id == primaryID) {
@@ -144,12 +159,15 @@ Zotero.Z2CSL = {
 		});
 	},
 
-	writeFile: function(data) {
+	writeFile: async function(data) {
 		//output XML data
 		this.debug("Opening File Picker...");
+		
+		var FilePicker = require('zotero/filePicker').default;
 		Components.utils.import("resource://gre/modules/NetUtil.jsm");
-		Components.utils.import("resource://gre/modules/FileUtils.jsm"); 
+		Components.utils.import("resource://gre/modules/FileUtils.jsm");
 
+		/*
 		var nsIFilePicker = Components.interfaces.nsIFilePicker;
 		var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
 		fp.init(window, "Select a file to save to", nsIFilePicker.modeSave);
@@ -172,14 +190,38 @@ Zotero.Z2CSL = {
 			converter.charset = "UTF-8";
 			var istream = converter.convertToInputStream(data);
 			NetUtil.asyncCopy(istream, ostream);
+		} */
+		let fp = new FilePicker();
+	  fp.init(window, "Select a file to save to", fp.modeSave);
+		fp.appendFilters(fp.filterAll);
+		
+		let res = await fp.show();
+		if (res != fp.returnCancel) {
+			this.debug("Writing data to file...");
+			this.debug(data)
+			var file = fp.file;
+			var ostream = FileUtils.openSafeFileOutputStream(file)
+
+			var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
+										 createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
+			converter.charset = "UTF-8";
+			var istream = converter.convertToInputStream(data);
+			this.debug("NetUtil")
+			NetUtil.asyncCopy(istream, ostream);
+
 		}
+
 		this.debug("Done");
 	},
 
 	retrieveCSLVariables: function(callback) {
 		if(this.cslVars) callback(this.cslVars);
 
+<<<<<<< Updated upstream
 		var url = 'http://citationstyles.org/downloads/specification.html';
+=======
+		var url = 'https://docs.citationstyles.org/en/stable/specification.html';
+>>>>>>> Stashed changes
 		var me = this;
 
 		Zotero.HTTP.processDocuments(url, function(doc) {
