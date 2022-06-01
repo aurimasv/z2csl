@@ -19,10 +19,8 @@ Zotero.Z2CSL = {
 			// see https://github.com/zotero/zotero/blob/4.0/chrome/content/zotero/xpcom/utilities.js#L1515
 			this.cslFieldMap["version"] = ["version"];
 		}
-
-		this.zoteroTypes = Zotero.ItemTypes.getTypes();
 		this.cslDateMap = Zotero.Schema.CSL_DATE_MAPPINGS;
-		this.cslCreatorMap = Zotero.Schema.CSL_NAMES_MAPPINGS;
+		this.cslCreatorMap = Zotero.Schema.CSL_NAME_MAPPINGS;
 	},
 
 	exportMappings: function() {
@@ -42,6 +40,8 @@ Zotero.Z2CSL = {
 		var nodes = [];
 		
 		this.debug("Creating item type map...");
+		this.debug("Checking on debug")
+		this.zoteroTypes = Zotero.ItemTypes.getTypes();
 		for(var i=0, n=this.zoteroTypes.length; i<n; i++) {
 			type = {name:'typeMap',
 							attributes:{
@@ -206,7 +206,6 @@ Zotero.Z2CSL = {
 
 	retrieveCSLVariables: function(callback) {
 		if(this.cslVars) callback(this.cslVars);
-
 
 		var url = 'https://docs.citationstyles.org/en/stable/specification.html';
 		var me = this;
