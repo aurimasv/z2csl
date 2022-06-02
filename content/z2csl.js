@@ -7,12 +7,7 @@ Zotero.Z2CSL = {
 		Components.classes["@mozilla.org/moz/jssubscript-loader;1"]
 			.getService(Components.interfaces.mozIJSSubScriptLoader)
 			.loadSubScript("chrome://zotero/content/xpcom/utilities/schema.js", context);
-		this.debug(context)
 		this.cslTypeMap = Zotero.Schema.CSL_TYPE_MAPPINGS;
-		this.debug("starting z2scl")
-		
-		
-		this.debug(Zotero.Schema.CSL_TYPE_MAPPINGS);
 		this.cslFieldMap = Zotero.Schema.CSL_TEXT_MAPPINGS;
 		if (Zotero.version.charAt(0)<5) {
 			// In Zotero 4.0 version instead of versionNumber is used
@@ -154,35 +149,6 @@ Zotero.Z2CSL = {
 		this.debug("Opening File Picker...");
 		
 		const FilePicker = require('zotero/filePicker').default;
-		this.debug("fp set")
-	
-		Components.utils.import("resource://gre/modules/NetUtil.jsm");
-		Components.utils.import("resource://gre/modules/FileUtils.jsm");
-
-		/*
-		var nsIFilePicker = Components.interfaces.nsIFilePicker;
-		var fp = Components.classes["@mozilla.org/filepicker;1"].createInstance(nsIFilePicker);
-		fp.init(window, "Select a file to save to", nsIFilePicker.modeSave);
-
-		fp.appendFilters(nsIFilePicker.filterXML)
-		fp.appendFilters(nsIFilePicker.filterAll);
-
-		fp.defaultExtension = 'xml';
-		fp.defaultString = 'typeMap';
-
-		var res = fp.show();
-
-		if (res != nsIFilePicker.returnCancel){
-			this.debug("Writing data to file...");
-			var file = fp.file;
-			var ostream = FileUtils.openSafeFileOutputStream(file)
-
-			var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
-										 createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
-			converter.charset = "UTF-8";
-			var istream = converter.convertToInputStream(data);
-			NetUtil.asyncCopy(istream, ostream);
-		} */
 		let fp = new FilePicker();
 	  fp.init(window, "Select a file to save to", fp.modeSave);
 		fp.appendFilters(fp.filterAll);
@@ -194,25 +160,8 @@ Zotero.Z2CSL = {
 			this.debug(data)
 			var file = fp.file;
 			
-			this.debug("trying fs")
-			const fs = require('fs');
-			this.debug("fs set")
-			/*var ostream = FileUtils.openSafeFileOutputStream(file)
-
-			var converter = Components.classes["@mozilla.org/intl/scriptableunicodeconverter"].
-										 createInstance(Components.interfaces.nsIScriptableUnicodeConverter);
-			converter.charset = "UTF-8";
-			var istream = converter.convertToInputStream(data);
-			this.debug("NetUtil")
-			NetUtil.asyncCopy(istream, ostream); */
-			fs.writeFile(file, data, err =>{
-				if (err) {
-					this.debug(err);
-				}
-			})
-
+			await Zotero.File.putContentsAsync(file, data);
 		}
-
 		this.debug("Done");
 	},
 
