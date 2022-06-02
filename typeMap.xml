@@ -1,1168 +1,1060 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="typeMap.xsl"?>
-
 <map>
-  <zoteroVersion value="6.0.9-beta.3+d12f3eda6" />
-  <date value="Thu, 02 Jun 2022 00:56:39 GMT" />
+  <zoteroVersion value="6.0.9-beta.3+d12f3eda6"/>
+  <date value="Wed, 01 Jun 2022 15:06:26 GMT"/>
   <zTypes>
     <typeMap zType="artwork" cslType="graphic">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Medium" value="artworkMedium" baseField="medium" />
-      <field label="Artwork Size" value="artworkSize" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Medium" value="artworkMedium" baseField="medium"/>
+      <field label="Artwork Size" value="artworkSize"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Artist" value="artist" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Artist" value="artist"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="attachment" cslType="document">
-      <field label="Title" value="title" />
-      <field label="Accessed" value="accessDate" />
-      <field label="URL" value="url" />
+      <field label="Title" value="title"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="URL" value="url"/>
     </typeMap>
     <typeMap zType="audioRecording" cslType="song">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Format" value="audioRecordingFormat" baseField="medium" />
-      <field label="Series Title" value="seriesTitle" />
-      <field label="Volume" value="volume" />
-      <field label="# of Volumes" value="numberOfVolumes" />
-      <field label="Place" value="place" />
-      <field label="Label" value="label" baseField="publisher" />
-      <field label="Date" value="date" />
-      <field label="Running Time" value="runningTime" />
-      <field label="Language" value="language" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Format" value="audioRecordingFormat" baseField="medium"/>
+      <field label="Series Title" value="seriesTitle"/>
+      <field label="Volume" value="volume"/>
+      <field label="# of Volumes" value="numberOfVolumes"/>
+      <field label="Place" value="place"/>
+      <field label="Label" value="label" baseField="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Running Time" value="runningTime"/>
+      <field label="Language" value="language"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Performer" value="performer" baseField="author" />
-        <creatorType label="Composer" value="composer" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Words By" value="wordsBy" />
+        <creatorType label="Performer" value="performer" baseField="author"/>
+        <creatorType label="Composer" value="composer"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Words By" value="wordsBy"/>
       </field>
     </typeMap>
     <typeMap zType="bill" cslType="bill">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Bill Number" value="billNumber" baseField="number" />
-      <field label="Code" value="code" />
-      <field label="Code Volume" value="codeVolume" baseField="volume" />
-      <field label="Section" value="section" />
-      <field label="Code Pages" value="codePages" baseField="pages" />
-      <field label="Legislative Body" value="legislativeBody" />
-      <field label="Session" value="session" />
-      <field label="History" value="history" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Bill Number" value="billNumber" baseField="number"/>
+      <field label="Code" value="code"/>
+      <field label="Code Volume" value="codeVolume" baseField="volume"/>
+      <field label="Section" value="section"/>
+      <field label="Code Pages" value="codePages" baseField="pages"/>
+      <field label="Legislative Body" value="legislativeBody"/>
+      <field label="Session" value="session"/>
+      <field label="History" value="history"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Sponsor" value="sponsor" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Cosponsor" value="cosponsor" />
+        <creatorType label="Sponsor" value="sponsor" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Cosponsor" value="cosponsor"/>
       </field>
     </typeMap>
     <typeMap zType="blogPost" cslType="post-weblog">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Blog Title" value="blogTitle" baseField="publicationTitle" />
-      <field label="Website Type" value="websiteType" baseField="type" />
-      <field label="Date" value="date" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Blog Title" value="blogTitle" baseField="publicationTitle"/>
+      <field label="Website Type" value="websiteType" baseField="type"/>
+      <field label="Date" value="date"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Commenter" value="commenter" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Commenter" value="commenter"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="book" cslType="book">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Series" value="series" />
-      <field label="Series Number" value="seriesNumber" />
-      <field label="Volume" value="volume" />
-      <field label="# of Volumes" value="numberOfVolumes" />
-      <field label="Edition" value="edition" />
-      <field label="Place" value="place" />
-      <field label="Publisher" value="publisher" />
-      <field label="Date" value="date" />
-      <field label="# of Pages" value="numPages" />
-      <field label="Language" value="language" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Series" value="series"/>
+      <field label="Series Number" value="seriesNumber"/>
+      <field label="Volume" value="volume"/>
+      <field label="# of Volumes" value="numberOfVolumes"/>
+      <field label="Edition" value="edition"/>
+      <field label="Place" value="place"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="# of Pages" value="numPages"/>
+      <field label="Language" value="language"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Series Editor" value="seriesEditor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Series Editor" value="seriesEditor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="bookSection" cslType="chapter">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Book Title" value="bookTitle" baseField="publicationTitle" />
-      <field label="Series" value="series" />
-      <field label="Series Number" value="seriesNumber" />
-      <field label="Volume" value="volume" />
-      <field label="# of Volumes" value="numberOfVolumes" />
-      <field label="Edition" value="edition" />
-      <field label="Place" value="place" />
-      <field label="Publisher" value="publisher" />
-      <field label="Date" value="date" />
-      <field label="Pages" value="pages" />
-      <field label="Language" value="language" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Book Title" value="bookTitle" baseField="publicationTitle"/>
+      <field label="Series" value="series"/>
+      <field label="Series Number" value="seriesNumber"/>
+      <field label="Volume" value="volume"/>
+      <field label="# of Volumes" value="numberOfVolumes"/>
+      <field label="Edition" value="edition"/>
+      <field label="Place" value="place"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Pages" value="pages"/>
+      <field label="Language" value="language"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Book Author" value="bookAuthor" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Series Editor" value="seriesEditor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Book Author" value="bookAuthor"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Series Editor" value="seriesEditor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="case" cslType="legal_case">
-      <field label="Case Name" value="caseName" baseField="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Court" value="court" />
-      <field label="Date Decided" value="dateDecided" baseField="date" />
-      <field label="Docket Number" value="docketNumber" baseField="number" />
-      <field label="Reporter" value="reporter" />
-      <field label="Reporter Volume" value="reporterVolume" baseField="volume" />
-      <field label="First Page" value="firstPage" baseField="pages" />
-      <field label="History" value="history" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Case Name" value="caseName" baseField="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Court" value="court"/>
+      <field label="Date Decided" value="dateDecided" baseField="date"/>
+      <field label="Docket Number" value="docketNumber" baseField="number"/>
+      <field label="Reporter" value="reporter"/>
+      <field label="Reporter Volume" value="reporterVolume" baseField="volume"/>
+      <field label="First Page" value="firstPage" baseField="pages"/>
+      <field label="History" value="history"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Counsel" value="counsel" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Counsel" value="counsel"/>
       </field>
     </typeMap>
     <typeMap zType="computerProgram" cslType="book">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Series Title" value="seriesTitle" />
-      <field label="Version" value="versionNumber" />
-      <field label="Date" value="date" />
-      <field label="System" value="system" />
-      <field label="Place" value="place" />
-      <field label="Company" value="company" baseField="publisher" />
-      <field label="Prog. Language" value="programmingLanguage" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Rights" value="rights" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Series Title" value="seriesTitle"/>
+      <field label="Version" value="versionNumber"/>
+      <field label="Date" value="date"/>
+      <field label="System" value="system"/>
+      <field label="Place" value="place"/>
+      <field label="Company" value="company" baseField="publisher"/>
+      <field label="Prog. Language" value="programmingLanguage"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Rights" value="rights"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Programmer" value="programmer" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Programmer" value="programmer" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="conferencePaper" cslType="paper-conference">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Date" value="date" />
-      <field label="Proceedings Title" value="proceedingsTitle" baseField="publicationTitle" />
-      <field label="Conference Name" value="conferenceName" />
-      <field label="Place" value="place" />
-      <field label="Publisher" value="publisher" />
-      <field label="Volume" value="volume" />
-      <field label="Pages" value="pages" />
-      <field label="Series" value="series" />
-      <field label="Language" value="language" />
-      <field label="DOI" value="DOI" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Date" value="date"/>
+      <field label="Proceedings Title" value="proceedingsTitle" baseField="publicationTitle"/>
+      <field label="Conference Name" value="conferenceName"/>
+      <field label="Place" value="place"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="Volume" value="volume"/>
+      <field label="Pages" value="pages"/>
+      <field label="Series" value="series"/>
+      <field label="Language" value="language"/>
+      <field label="DOI" value="DOI"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Series Editor" value="seriesEditor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Series Editor" value="seriesEditor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="dictionaryEntry" cslType="entry-dictionary">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Dictionary Title" value="dictionaryTitle" baseField="publicationTitle" />
-      <field label="Series" value="series" />
-      <field label="Series Number" value="seriesNumber" />
-      <field label="Volume" value="volume" />
-      <field label="# of Volumes" value="numberOfVolumes" />
-      <field label="Edition" value="edition" />
-      <field label="Place" value="place" />
-      <field label="Publisher" value="publisher" />
-      <field label="Date" value="date" />
-      <field label="Pages" value="pages" />
-      <field label="Language" value="language" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Dictionary Title" value="dictionaryTitle" baseField="publicationTitle"/>
+      <field label="Series" value="series"/>
+      <field label="Series Number" value="seriesNumber"/>
+      <field label="Volume" value="volume"/>
+      <field label="# of Volumes" value="numberOfVolumes"/>
+      <field label="Edition" value="edition"/>
+      <field label="Place" value="place"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Pages" value="pages"/>
+      <field label="Language" value="language"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Series Editor" value="seriesEditor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Series Editor" value="seriesEditor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="document" cslType="document">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Publisher" value="publisher" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Reviewed Author" value="reviewedAuthor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Reviewed Author" value="reviewedAuthor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="email" cslType="personal_communication">
-      <field label="Subject" value="subject" baseField="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Date" value="date" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Language" value="language" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Subject" value="subject" baseField="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Date" value="date"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Language" value="language"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Recipient" value="recipient" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Recipient" value="recipient"/>
       </field>
     </typeMap>
     <typeMap zType="encyclopediaArticle" cslType="entry-encyclopedia">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Encyclopedia Title" value="encyclopediaTitle" baseField="publicationTitle" />
-      <field label="Series" value="series" />
-      <field label="Series Number" value="seriesNumber" />
-      <field label="Volume" value="volume" />
-      <field label="# of Volumes" value="numberOfVolumes" />
-      <field label="Edition" value="edition" />
-      <field label="Place" value="place" />
-      <field label="Publisher" value="publisher" />
-      <field label="Date" value="date" />
-      <field label="Pages" value="pages" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Language" value="language" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Encyclopedia Title" value="encyclopediaTitle" baseField="publicationTitle"/>
+      <field label="Series" value="series"/>
+      <field label="Series Number" value="seriesNumber"/>
+      <field label="Volume" value="volume"/>
+      <field label="# of Volumes" value="numberOfVolumes"/>
+      <field label="Edition" value="edition"/>
+      <field label="Place" value="place"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Pages" value="pages"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Language" value="language"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Series Editor" value="seriesEditor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Series Editor" value="seriesEditor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="film" cslType="motion_picture">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Distributor" value="distributor" baseField="publisher" />
-      <field label="Date" value="date" />
-      <field label="Genre" value="genre" baseField="type" />
-      <field label="Format" value="videoRecordingFormat" baseField="medium" />
-      <field label="Running Time" value="runningTime" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Distributor" value="distributor" baseField="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Genre" value="genre" baseField="type"/>
+      <field label="Format" value="videoRecordingFormat" baseField="medium"/>
+      <field label="Running Time" value="runningTime"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Director" value="director" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Producer" value="producer" />
-        <creatorType label="Scriptwriter" value="scriptwriter" />
+        <creatorType label="Director" value="director" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Producer" value="producer"/>
+        <creatorType label="Scriptwriter" value="scriptwriter"/>
       </field>
     </typeMap>
     <typeMap zType="forumPost" cslType="post">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Forum/Listserv Title" value="forumTitle" baseField="publicationTitle" />
-      <field label="Post Type" value="postType" baseField="type" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Forum/Listserv Title" value="forumTitle" baseField="publicationTitle"/>
+      <field label="Post Type" value="postType" baseField="type"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="hearing" cslType="bill">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Committee" value="committee" />
-      <field label="Place" value="place" />
-      <field label="Publisher" value="publisher" />
-      <field label="# of Volumes" value="numberOfVolumes" />
-      <field label="Document Number" value="documentNumber" baseField="number" />
-      <field label="Pages" value="pages" />
-      <field label="Legislative Body" value="legislativeBody" />
-      <field label="Session" value="session" />
-      <field label="History" value="history" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Committee" value="committee"/>
+      <field label="Place" value="place"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="# of Volumes" value="numberOfVolumes"/>
+      <field label="Document Number" value="documentNumber" baseField="number"/>
+      <field label="Pages" value="pages"/>
+      <field label="Legislative Body" value="legislativeBody"/>
+      <field label="Session" value="session"/>
+      <field label="History" value="history"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Contributor" value="contributor" baseField="author" />
+        <creatorType label="Contributor" value="contributor" baseField="author"/>
       </field>
     </typeMap>
     <typeMap zType="instantMessage" cslType="personal_communication">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Recipient" value="recipient" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Recipient" value="recipient"/>
       </field>
     </typeMap>
     <typeMap zType="interview" cslType="interview">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Date" value="date" />
-      <field label="Medium" value="interviewMedium" baseField="medium" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Date" value="date"/>
+      <field label="Medium" value="interviewMedium" baseField="medium"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Interview With" value="interviewee" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Interviewer" value="interviewer" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Interview With" value="interviewee" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Interviewer" value="interviewer"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="journalArticle" cslType="article-journal">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Publication" value="publicationTitle" />
-      <field label="Volume" value="volume" />
-      <field label="Issue" value="issue" />
-      <field label="Pages" value="pages" />
-      <field label="Date" value="date" />
-      <field label="Series" value="series" />
-      <field label="Series Title" value="seriesTitle" />
-      <field label="Series Text" value="seriesText" />
-      <field label="Journal Abbr" value="journalAbbreviation" />
-      <field label="Language" value="language" />
-      <field label="DOI" value="DOI" />
-      <field label="ISSN" value="ISSN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Publication" value="publicationTitle"/>
+      <field label="Volume" value="volume"/>
+      <field label="Issue" value="issue"/>
+      <field label="Pages" value="pages"/>
+      <field label="Date" value="date"/>
+      <field label="Series" value="series"/>
+      <field label="Series Title" value="seriesTitle"/>
+      <field label="Series Text" value="seriesText"/>
+      <field label="Journal Abbr" value="journalAbbreviation"/>
+      <field label="Language" value="language"/>
+      <field label="DOI" value="DOI"/>
+      <field label="ISSN" value="ISSN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Reviewed Author" value="reviewedAuthor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Reviewed Author" value="reviewedAuthor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="letter" cslType="personal_communication">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Type" value="letterType" baseField="type" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Type" value="letterType" baseField="type"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Recipient" value="recipient" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Recipient" value="recipient"/>
       </field>
     </typeMap>
     <typeMap zType="magazineArticle" cslType="article-magazine">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Publication" value="publicationTitle" />
-      <field label="Volume" value="volume" />
-      <field label="Issue" value="issue" />
-      <field label="Date" value="date" />
-      <field label="Pages" value="pages" />
-      <field label="Language" value="language" />
-      <field label="ISSN" value="ISSN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Publication" value="publicationTitle"/>
+      <field label="Volume" value="volume"/>
+      <field label="Issue" value="issue"/>
+      <field label="Date" value="date"/>
+      <field label="Pages" value="pages"/>
+      <field label="Language" value="language"/>
+      <field label="ISSN" value="ISSN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Reviewed Author" value="reviewedAuthor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Reviewed Author" value="reviewedAuthor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="manuscript" cslType="manuscript">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Type" value="manuscriptType" baseField="type" />
-      <field label="Place" value="place" />
-      <field label="Date" value="date" />
-      <field label="# of Pages" value="numPages" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Type" value="manuscriptType" baseField="type"/>
+      <field label="Place" value="place"/>
+      <field label="Date" value="date"/>
+      <field label="# of Pages" value="numPages"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="map" cslType="map">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Type" value="mapType" baseField="type" />
-      <field label="Scale" value="scale" />
-      <field label="Series Title" value="seriesTitle" />
-      <field label="Edition" value="edition" />
-      <field label="Place" value="place" />
-      <field label="Publisher" value="publisher" />
-      <field label="Date" value="date" />
-      <field label="Language" value="language" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Type" value="mapType" baseField="type"/>
+      <field label="Scale" value="scale"/>
+      <field label="Series Title" value="seriesTitle"/>
+      <field label="Edition" value="edition"/>
+      <field label="Place" value="place"/>
+      <field label="Publisher" value="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Language" value="language"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Cartographer" value="cartographer" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Series Editor" value="seriesEditor" />
+        <creatorType label="Cartographer" value="cartographer" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Series Editor" value="seriesEditor"/>
       </field>
     </typeMap>
     <typeMap zType="newspaperArticle" cslType="article-newspaper">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Publication" value="publicationTitle" />
-      <field label="Place" value="place" />
-      <field label="Edition" value="edition" />
-      <field label="Date" value="date" />
-      <field label="Section" value="section" />
-      <field label="Pages" value="pages" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="ISSN" value="ISSN" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Publication" value="publicationTitle"/>
+      <field label="Place" value="place"/>
+      <field label="Edition" value="edition"/>
+      <field label="Date" value="date"/>
+      <field label="Section" value="section"/>
+      <field label="Pages" value="pages"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="ISSN" value="ISSN"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Reviewed Author" value="reviewedAuthor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Reviewed Author" value="reviewedAuthor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
-    <typeMap zType="note" cslType="document">
-    </typeMap>
+    <typeMap zType="note" cslType="document"> </typeMap>
     <typeMap zType="patent" cslType="patent">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Place" value="place" />
-      <field label="Country" value="country" />
-      <field label="Assignee" value="assignee" />
-      <field label="Issuing Authority" value="issuingAuthority" />
-      <field label="Patent Number" value="patentNumber" baseField="number" />
-      <field label="Filing Date" value="filingDate" />
-      <field label="Pages" value="pages" />
-      <field label="Application Number" value="applicationNumber" />
-      <field label="Priority Numbers" value="priorityNumbers" />
-      <field label="Issue Date" value="issueDate" baseField="date" />
-      <field label="References" value="references" />
-      <field label="Legal Status" value="legalStatus" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Place" value="place"/>
+      <field label="Country" value="country"/>
+      <field label="Assignee" value="assignee"/>
+      <field label="Issuing Authority" value="issuingAuthority"/>
+      <field label="Patent Number" value="patentNumber" baseField="number"/>
+      <field label="Filing Date" value="filingDate"/>
+      <field label="Pages" value="pages"/>
+      <field label="Application Number" value="applicationNumber"/>
+      <field label="Priority Numbers" value="priorityNumbers"/>
+      <field label="Issue Date" value="issueDate" baseField="date"/>
+      <field label="References" value="references"/>
+      <field label="Legal Status" value="legalStatus"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Inventor" value="inventor" baseField="author" />
-        <creatorType label="Attorney/Agent" value="attorneyAgent" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Inventor" value="inventor" baseField="author"/>
+        <creatorType label="Attorney/Agent" value="attorneyAgent"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="podcast" cslType="broadcast">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Series Title" value="seriesTitle" />
-      <field label="Episode Number" value="episodeNumber" baseField="number" />
-      <field label="File Type" value="audioFileType" baseField="medium" />
-      <field label="Running Time" value="runningTime" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Series Title" value="seriesTitle"/>
+      <field label="Episode Number" value="episodeNumber" baseField="number"/>
+      <field label="File Type" value="audioFileType" baseField="medium"/>
+      <field label="Running Time" value="runningTime"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Podcaster" value="podcaster" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Guest" value="guest" />
+        <creatorType label="Podcaster" value="podcaster" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Guest" value="guest"/>
       </field>
     </typeMap>
     <typeMap zType="presentation" cslType="speech">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Type" value="presentationType" baseField="type" />
-      <field label="Date" value="date" />
-      <field label="Place" value="place" />
-      <field label="Meeting Name" value="meetingName" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Type" value="presentationType" baseField="type"/>
+      <field label="Date" value="date"/>
+      <field label="Place" value="place"/>
+      <field label="Meeting Name" value="meetingName"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Presenter" value="presenter" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Presenter" value="presenter" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="radioBroadcast" cslType="broadcast">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Program Title" value="programTitle" baseField="publicationTitle" />
-      <field label="Episode Number" value="episodeNumber" baseField="number" />
-      <field label="Format" value="audioRecordingFormat" baseField="medium" />
-      <field label="Place" value="place" />
-      <field label="Network" value="network" baseField="publisher" />
-      <field label="Date" value="date" />
-      <field label="Running Time" value="runningTime" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Program Title" value="programTitle" baseField="publicationTitle"/>
+      <field label="Episode Number" value="episodeNumber" baseField="number"/>
+      <field label="Format" value="audioRecordingFormat" baseField="medium"/>
+      <field label="Place" value="place"/>
+      <field label="Network" value="network" baseField="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Running Time" value="runningTime"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Director" value="director" baseField="author" />
-        <creatorType label="Cast Member" value="castMember" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Guest" value="guest" />
-        <creatorType label="Producer" value="producer" />
-        <creatorType label="Scriptwriter" value="scriptwriter" />
+        <creatorType label="Director" value="director" baseField="author"/>
+        <creatorType label="Cast Member" value="castMember"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Guest" value="guest"/>
+        <creatorType label="Producer" value="producer"/>
+        <creatorType label="Scriptwriter" value="scriptwriter"/>
       </field>
     </typeMap>
     <typeMap zType="report" cslType="report">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Report Number" value="reportNumber" baseField="number" />
-      <field label="Report Type" value="reportType" baseField="type" />
-      <field label="Series Title" value="seriesTitle" />
-      <field label="Place" value="place" />
-      <field label="Institution" value="institution" baseField="publisher" />
-      <field label="Date" value="date" />
-      <field label="Pages" value="pages" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Report Number" value="reportNumber" baseField="number"/>
+      <field label="Report Type" value="reportType" baseField="type"/>
+      <field label="Series Title" value="seriesTitle"/>
+      <field label="Place" value="place"/>
+      <field label="Institution" value="institution" baseField="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Pages" value="pages"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Series Editor" value="seriesEditor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Series Editor" value="seriesEditor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
     <typeMap zType="statute" cslType="legislation">
-      <field label="Name of Act" value="nameOfAct" baseField="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Code" value="code" />
-      <field label="Code Number" value="codeNumber" />
-      <field label="Public Law Number" value="publicLawNumber" baseField="number" />
-      <field label="Date Enacted" value="dateEnacted" baseField="date" />
-      <field label="Pages" value="pages" />
-      <field label="Section" value="section" />
-      <field label="Session" value="session" />
-      <field label="History" value="history" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Name of Act" value="nameOfAct" baseField="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Code" value="code"/>
+      <field label="Code Number" value="codeNumber"/>
+      <field label="Public Law Number" value="publicLawNumber" baseField="number"/>
+      <field label="Date Enacted" value="dateEnacted" baseField="date"/>
+      <field label="Pages" value="pages"/>
+      <field label="Section" value="section"/>
+      <field label="Session" value="session"/>
+      <field label="History" value="history"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="thesis" cslType="thesis">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Type" value="thesisType" baseField="type" />
-      <field label="University" value="university" baseField="publisher" />
-      <field label="Place" value="place" />
-      <field label="Date" value="date" />
-      <field label="# of Pages" value="numPages" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Type" value="thesisType" baseField="type"/>
+      <field label="University" value="university" baseField="publisher"/>
+      <field label="Place" value="place"/>
+      <field label="Date" value="date"/>
+      <field label="# of Pages" value="numPages"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
       </field>
     </typeMap>
     <typeMap zType="tvBroadcast" cslType="broadcast">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Program Title" value="programTitle" baseField="publicationTitle" />
-      <field label="Episode Number" value="episodeNumber" baseField="number" />
-      <field label="Format" value="videoRecordingFormat" baseField="medium" />
-      <field label="Place" value="place" />
-      <field label="Network" value="network" baseField="publisher" />
-      <field label="Date" value="date" />
-      <field label="Running Time" value="runningTime" />
-      <field label="Language" value="language" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Program Title" value="programTitle" baseField="publicationTitle"/>
+      <field label="Episode Number" value="episodeNumber" baseField="number"/>
+      <field label="Format" value="videoRecordingFormat" baseField="medium"/>
+      <field label="Place" value="place"/>
+      <field label="Network" value="network" baseField="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Running Time" value="runningTime"/>
+      <field label="Language" value="language"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Director" value="director" baseField="author" />
-        <creatorType label="Cast Member" value="castMember" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Guest" value="guest" />
-        <creatorType label="Producer" value="producer" />
-        <creatorType label="Scriptwriter" value="scriptwriter" />
+        <creatorType label="Director" value="director" baseField="author"/>
+        <creatorType label="Cast Member" value="castMember"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Guest" value="guest"/>
+        <creatorType label="Producer" value="producer"/>
+        <creatorType label="Scriptwriter" value="scriptwriter"/>
       </field>
     </typeMap>
     <typeMap zType="videoRecording" cslType="motion_picture">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Format" value="videoRecordingFormat" baseField="medium" />
-      <field label="Series Title" value="seriesTitle" />
-      <field label="Volume" value="volume" />
-      <field label="# of Volumes" value="numberOfVolumes" />
-      <field label="Place" value="place" />
-      <field label="Studio" value="studio" baseField="publisher" />
-      <field label="Date" value="date" />
-      <field label="Running Time" value="runningTime" />
-      <field label="Language" value="language" />
-      <field label="ISBN" value="ISBN" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Format" value="videoRecordingFormat" baseField="medium"/>
+      <field label="Series Title" value="seriesTitle"/>
+      <field label="Volume" value="volume"/>
+      <field label="# of Volumes" value="numberOfVolumes"/>
+      <field label="Place" value="place"/>
+      <field label="Studio" value="studio" baseField="publisher"/>
+      <field label="Date" value="date"/>
+      <field label="Running Time" value="runningTime"/>
+      <field label="Language" value="language"/>
+      <field label="ISBN" value="ISBN"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Director" value="director" baseField="author" />
-        <creatorType label="Cast Member" value="castMember" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Producer" value="producer" />
-        <creatorType label="Scriptwriter" value="scriptwriter" />
+        <creatorType label="Director" value="director" baseField="author"/>
+        <creatorType label="Cast Member" value="castMember"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Producer" value="producer"/>
+        <creatorType label="Scriptwriter" value="scriptwriter"/>
       </field>
     </typeMap>
     <typeMap zType="webpage" cslType="webpage">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Website Title" value="websiteTitle" baseField="publicationTitle" />
-      <field label="Website Type" value="websiteType" baseField="type" />
-      <field label="Date" value="date" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Language" value="language" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Website Title" value="websiteTitle" baseField="publicationTitle"/>
+      <field label="Website Type" value="websiteType" baseField="type"/>
+      <field label="Date" value="date"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Language" value="language"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
-    <typeMap zType="annotation" cslType="">
-    </typeMap>
+    <typeMap zType="annotation" cslType=""> </typeMap>
     <typeMap zType="preprint" cslType="article">
-      <field label="Title" value="title" />
-      <field label="Abstract" value="abstractNote" />
-      <field label="Genre" value="genre" baseField="type" />
-      <field label="Repository" value="repository" baseField="publisher" />
-      <field label="Archive ID" value="archiveID" baseField="number" />
-      <field label="Place" value="place" />
-      <field label="Date" value="date" />
-      <field label="Series" value="series" />
-      <field label="Series Number" value="seriesNumber" />
-      <field label="DOI" value="DOI" />
-      <field label="Citation Key" value="citationKey" />
-      <field label="URL" value="url" />
-      <field label="Accessed" value="accessDate" />
-      <field label="Archive" value="archive" />
-      <field label="Loc. in Archive" value="archiveLocation" />
-      <field label="Short Title" value="shortTitle" />
-      <field label="Language" value="language" />
-      <field label="Library Catalog" value="libraryCatalog" />
-      <field label="Call Number" value="callNumber" />
-      <field label="Rights" value="rights" />
-      <field label="Extra" value="extra" />
+      <field label="Title" value="title"/>
+      <field label="Abstract" value="abstractNote"/>
+      <field label="Genre" value="genre" baseField="type"/>
+      <field label="Repository" value="repository" baseField="publisher"/>
+      <field label="Archive ID" value="archiveID" baseField="number"/>
+      <field label="Place" value="place"/>
+      <field label="Date" value="date"/>
+      <field label="Series" value="series"/>
+      <field label="Series Number" value="seriesNumber"/>
+      <field label="DOI" value="DOI"/>
+      <field label="Citation Key" value="citationKey"/>
+      <field label="URL" value="url"/>
+      <field label="Accessed" value="accessDate"/>
+      <field label="Archive" value="archive"/>
+      <field label="Loc. in Archive" value="archiveLocation"/>
+      <field label="Short Title" value="shortTitle"/>
+      <field label="Language" value="language"/>
+      <field label="Library Catalog" value="libraryCatalog"/>
+      <field label="Call Number" value="callNumber"/>
+      <field label="Rights" value="rights"/>
+      <field label="Extra" value="extra"/>
       <field value="creator">
-        <creatorType label="Author" value="author" baseField="author" />
-        <creatorType label="Contributor" value="contributor" />
-        <creatorType label="Editor" value="editor" />
-        <creatorType label="Reviewed Author" value="reviewedAuthor" />
-        <creatorType label="Translator" value="translator" />
+        <creatorType label="Author" value="author" baseField="author"/>
+        <creatorType label="Contributor" value="contributor"/>
+        <creatorType label="Editor" value="editor"/>
+        <creatorType label="Reviewed Author" value="reviewedAuthor"/>
+        <creatorType label="Translator" value="translator"/>
       </field>
     </typeMap>
   </zTypes>
   <cslFieldMap>
-    <map zField="abstractNote" cslField="abstract" />
-    <map zField="archive" cslField="archive" />
-    <map zField="archiveLocation" cslField="archive_location" />
-    <map zField="court" cslField="authority" />
-    <map zField="legislativeBody" cslField="authority" />
-    <map zField="issuingAuthority" cslField="authority" />
-    <map zField="callNumber" cslField="call-number" />
-    <map zField="applicationNumber" cslField="call-number" />
-    <map zField="session" cslField="chapter-number" />
-    <map zField="seriesNumber" cslField="collection-number" />
-    <map zField="seriesTitle" cslField="collection-title" />
-    <map zField="series" cslField="collection-title" />
-    <map zField="publicationTitle" cslField="container-title" />
-    <map zField="reporter" cslField="container-title" />
-    <map zField="code" cslField="container-title" />
-    <map zField="artworkSize" cslField="dimensions" />
-    <map zField="runningTime" cslField="dimensions" />
-    <map zField="DOI" cslField="DOI" />
-    <map zField="edition" cslField="edition" />
-    <map zField="meetingName" cslField="event" />
-    <map zField="conferenceName" cslField="event" />
-    <map zField="place" cslField="event-place" />
-    <map zField="type" cslField="genre" />
-    <map zField="programmingLanguage" cslField="genre" />
-    <map zField="ISBN" cslField="ISBN" />
-    <map zField="ISSN" cslField="ISSN" />
-    <map zField="issue" cslField="issue" />
-    <map zField="priorityNumbers" cslField="issue" />
-    <map zField="journalAbbreviation" cslField="journalAbbreviation" />
-    <map zField="language" cslField="language" />
-    <map zField="medium" cslField="medium" />
-    <map zField="system" cslField="medium" />
-    <map zField="extra" cslField="note" />
-    <map zField="number" cslField="number" />
-    <map zField="numPages" cslField="number-of-pages" />
-    <map zField="numberOfVolumes" cslField="number-of-volumes" />
-    <map zField="pages" cslField="page" />
-    <map zField="publisher" cslField="publisher" />
-    <map zField="place" cslField="publisher-place" />
-    <map zField="history" cslField="references" />
-    <map zField="references" cslField="references" />
-    <map zField="scale" cslField="scale" />
-    <map zField="section" cslField="section" />
-    <map zField="committee" cslField="section" />
-    <map zField="shortTitle" cslField="shortTitle" />
-    <map zField="libraryCatalog" cslField="source" />
-    <map zField="legalStatus" cslField="status" />
-    <map zField="title" cslField="title" />
-    <map zField="shortTitle" cslField="title-short" />
-    <map zField="url" cslField="URL" />
-    <map zField="versionNumber" cslField="version" />
-    <map zField="volume" cslField="volume" />
-    <map zField="codeNumber" cslField="volume" />
-    <map zField="accessDate" cslField="accessed" />
-    <map zField="date" cslField="issued" />
-    <map zField="filingDate" cslField="submitted" />
+    <map zField="abstractNote" cslField="abstract"/>
+    <map zField="archive" cslField="archive"/>
+    <map zField="archiveLocation" cslField="archive_location"/>
+    <map zField="court" cslField="authority"/>
+    <map zField="legislativeBody" cslField="authority"/>
+    <map zField="issuingAuthority" cslField="authority"/>
+    <map zField="callNumber" cslField="call-number"/>
+    <map zField="applicationNumber" cslField="call-number"/>
+    <map zField="session" cslField="chapter-number"/>
+    <map zField="seriesNumber" cslField="collection-number"/>
+    <map zField="seriesTitle" cslField="collection-title"/>
+    <map zField="series" cslField="collection-title"/>
+    <map zField="publicationTitle" cslField="container-title"/>
+    <map zField="reporter" cslField="container-title"/>
+    <map zField="code" cslField="container-title"/>
+    <map zField="artworkSize" cslField="dimensions"/>
+    <map zField="runningTime" cslField="dimensions"/>
+    <map zField="DOI" cslField="DOI"/>
+    <map zField="edition" cslField="edition"/>
+    <map zField="meetingName" cslField="event"/>
+    <map zField="conferenceName" cslField="event"/>
+    <map zField="place" cslField="event-place"/>
+    <map zField="type" cslField="genre"/>
+    <map zField="programmingLanguage" cslField="genre"/>
+    <map zField="ISBN" cslField="ISBN"/>
+    <map zField="ISSN" cslField="ISSN"/>
+    <map zField="issue" cslField="issue"/>
+    <map zField="priorityNumbers" cslField="issue"/>
+    <map zField="journalAbbreviation" cslField="journalAbbreviation"/>
+    <map zField="language" cslField="language"/>
+    <map zField="medium" cslField="medium"/>
+    <map zField="system" cslField="medium"/>
+    <map zField="extra" cslField="note"/>
+    <map zField="number" cslField="number"/>
+    <map zField="numPages" cslField="number-of-pages"/>
+    <map zField="numberOfVolumes" cslField="number-of-volumes"/>
+    <map zField="pages" cslField="page"/>
+    <map zField="publisher" cslField="publisher"/>
+    <map zField="place" cslField="publisher-place"/>
+    <map zField="history" cslField="references"/>
+    <map zField="references" cslField="references"/>
+    <map zField="scale" cslField="scale"/>
+    <map zField="section" cslField="section"/>
+    <map zField="committee" cslField="section"/>
+    <map zField="shortTitle" cslField="shortTitle"/>
+    <map zField="libraryCatalog" cslField="source"/>
+    <map zField="legalStatus" cslField="status"/>
+    <map zField="title" cslField="title"/>
+    <map zField="shortTitle" cslField="title-short"/>
+    <map zField="url" cslField="URL"/>
+    <map zField="versionNumber" cslField="version"/>
+    <map zField="volume" cslField="volume"/>
+    <map zField="codeNumber" cslField="volume"/>
+    <map zField="accessDate" cslField="accessed"/>
+    <map zField="date" cslField="issued"/>
+    <map zField="filingDate" cslField="submitted"/>
   </cslFieldMap>
   <cslCreatorMap>
-    <map zField="author" cslField="author" />
-    <map zField="bookAuthor" cslField="container-author" />
-    <map zField="composer" cslField="composer" />
-    <map zField="director" cslField="director" />
-    <map zField="editor" cslField="editor" />
-    <map zField="interviewer" cslField="interviewer" />
-    <map zField="recipient" cslField="recipient" />
-    <map zField="reviewedAuthor" cslField="reviewed-author" />
-    <map zField="seriesEditor" cslField="collection-editor" />
-    <map zField="translator" cslField="translator" />
+    <map zField="author" cslField="author"/>
+    <map zField="bookAuthor" cslField="container-author"/>
+    <map zField="composer" cslField="composer"/>
+    <map zField="director" cslField="director"/>
+    <map zField="editor" cslField="editor"/>
+    <map zField="interviewer" cslField="interviewer"/>
+    <map zField="recipient" cslField="recipient"/>
+    <map zField="reviewedAuthor" cslField="reviewed-author"/>
+    <map zField="seriesEditor" cslField="collection-editor"/>
+    <map zField="translator" cslField="translator"/>
   </cslCreatorMap>
   <citeprocJStoCSLmap>
-    <remap citeprocField="shortTitle" cslUsage="title-short or &lt;text variable=&quot;title&quot; form=&quot;short&quot;/&gt;" descKey="title-short" />
-    <remap citeprocField="journalAbbreviation" cslUsage="container-title-short or &lt;text variable=&quot;container-title&quot; form=&quot;short&quot;/&gt;" descKey="container-title-short" />
+    <remap citeprocField="shortTitle" cslUsage="title-short or &lt;text variable=&quot;title&quot; form=&quot;short&quot;/&gt;" descKey="title-short"/>
+    <remap citeprocField="journalAbbreviation" cslUsage="container-title-short or &lt;text variable=&quot;container-title&quot; form=&quot;short&quot;/&gt;" descKey="container-title-short"/>
   </citeprocJStoCSLmap>
   <cslVars>
-    <itemTypes>
-    </itemTypes>
+    <itemTypes> </itemTypes>
     <vars>
-      <var name="abstract" type="standard" description="Abstract of the item (e.g. the abstract of a journal article)" />
-      <var name="annote" type="standard" description="Short markup, decoration, or annotation to the item (e.g., to indicate items included in a review); For descriptive text (e.g., in an annotated bibliography), use note instead" />
-      <var name="archive" type="standard" description="Archive storing the item" />
-      <var name="archive_collection" type="standard" description="Collection the item is part of within an archive" />
-      <var name="archive_location" type="standard" description="Storage location within an archive (e.g. a box and folder number)" />
-      <var name="archive-place" type="standard" description="Geographic location of the archive" />
-      <var name="authority" type="standard" description="Issuing or judicial authority (e.g. “USPTO” for a patent, “Fairfax Circuit Court” for a legal case)" />
-      <var name="call-number" type="standard" description="Call number (to locate the item in a library)" />
-      <var name="citation-key" type="standard" description="Identifier of the item in the input data file (analogous to BibTeX entrykey); Use this variable to facilitate conversion between word-processor and plain-text writing systems; For an identifer intended as formatted output label for a citation (e.g. “Ferr78”), use citation-label instead" />
-      <var name="citation-label" type="standard" description="Label identifying the item in in-text citations of label styles (e.g. “Ferr78”); May be assigned by the CSL processor based on item metadata; For the identifier of the item in the input data file, use citation-key instead" />
-      <var name="collection-title" type="standard" description="Title of the collection holding the item (e.g. the series title for a book; the lecture series title for a presentation)" />
-      <var name="container-title" type="standard" description="Title of the container holding the item (e.g. the book title for a book chapter, the journal title for a journal article; the album title for a recording; the session title for multi-part presentation at a conference)" />
-      <var name="container-title-short" type="standard" description="Short/abbreviated form of container-title; Deprecated; use variable=&quot;container-title&quot; form=&quot;short&quot; instead" />
-      <var name="dimensions" type="standard" description="Physical (e.g. size) or temporal (e.g. running time) dimensions of the item" />
-      <var name="division" type="standard" description="Minor subdivision of a court with a jurisdiction for a legal item" />
-      <var name="DOI" type="standard" description="Digital Object Identifier (e.g. “10.1128/AEM.02591-07”)" />
-      <var name="event" type="standard" description="Deprecated legacy variant of event-title" />
-      <var name="event-title" type="standard" description="Name of the event related to the item (e.g. the conference name when citing a conference paper; the meeting where presentation was made)" />
-      <var name="event-place" type="standard" description="Geographic location of the event related to the item (e.g. “Amsterdam, The Netherlands”)" />
-      <var name="genre" type="standard" description="Type, class, or subtype of the item (e.g. “Doctoral dissertation” for a PhD thesis; “NIH Publication” for an NIH technical report); Do not use for topical descriptions or categories (e.g. “adventure” for an adventure movie)" />
-      <var name="ISBN" type="standard" description="International Standard Book Number (e.g. “978-3-8474-1017-1”)" />
-      <var name="ISSN" type="standard" description="International Standard Serial Number" />
-      <var name="jurisdiction" type="standard" description="Geographic scope of relevance (e.g. “US” for a US patent; the court hearing a legal case)" />
-      <var name="keyword" type="standard" description="Keyword(s) or tag(s) attached to the item" />
-      <var name="language" type="standard" description="The language of the item; Should be entered as an ISO 639-1 two-letter language code (e.g. “en”, “zh”), optionally with a two-letter locale code (e.g. “de-DE”, “de-AT”)" />
-      <var name="license" type="standard" description="The license information applicable to an item (e.g. the license an article or software is released under; the copyright information for an item; the classification status of a document)" />
-      <var name="medium" type="standard" description="Description of the item’s format or medium (e.g. “CD”, “DVD”, “Album”, etc.)" />
-      <var name="note" type="standard" description="Descriptive text or notes about an item (e.g. in an annotated bibliography)" />
-      <var name="original-publisher" type="standard" description="Original publisher, for items that have been republished by a different publisher" />
-      <var name="original-publisher-place" type="standard" description="Geographic location of the original publisher (e.g. “London, UK”)" />
-      <var name="original-title" type="standard" description="Title of the original version (e.g. “Война и мир”, the untranslated Russian title of “War and Peace”)" />
-      <var name="part-title" type="standard" description="Title of the specific part of an item being cited" />
-      <var name="PMCID" type="standard" description="PubMed Central reference number" />
-      <var name="PMID" type="standard" description="PubMed reference number" />
-      <var name="publisher" type="standard" description="Publisher" />
-      <var name="publisher-place" type="standard" description="Geographic location of the publisher" />
-      <var name="references" type="standard" description="Resources related to the procedural history of a legal case or legislation; Can also be used to refer to the procedural history of other items (e.g. “Conference canceled” for a presentation accepted as a conference that was subsequently canceled; details of a retraction or correction notice)" />
-      <var name="reviewed-genre" type="standard" description="Type of the item being reviewed by the current item (e.g. book, film)" />
-      <var name="reviewed-title" type="standard" description="Title of the item reviewed by the current item" />
-      <var name="scale" type="standard" description="Scale of e.g. a map or model" />
-      <var name="source" type="standard" description="Source from whence the item originates (e.g. a library catalog or database)" />
-      <var name="status" type="standard" description="Publication status of the item (e.g. “forthcoming”; “in press”; “advance online publication”; “retracted”)" />
-      <var name="title" type="standard" description="Primary title of the item" />
-      <var name="title-short" type="standard" description="Short/abbreviated form of title; Deprecated; use variable=&quot;title&quot; form=&quot;short&quot; instead" />
-      <var name="URL" type="standard" description="Uniform Resource Locator (e.g. “https://aem.asm.org/cgi/content/full/74/9/2766”)" />
-      <var name="volume-title" type="standard" description="Title of the volume of the item or container holding the item; Also use for titles of periodical special issues, special sections, and the like" />
-      <var name="year-suffix" type="standard" description="Disambiguating year suffix in author-date styles (e.g. “a” in “Doe, 1999a”)" />
-      <var name="chapter-number" type="number" description="Chapter number (e.g. chapter number in a book; track number on an album)" />
-      <var name="citation-number" type="number" description="Index (starting at 1) of the cited reference in the bibliography (generated by the CSL processor)" />
-      <var name="collection-number" type="number" description="Number identifying the collection holding the item (e.g. the series number for a book)" />
-      <var name="edition" type="number" description="(Container) edition holding the item (e.g. “3” when citing a chapter in the third edition of a book)" />
-      <var name="first-reference-note-number" type="number" description="Number of a preceding note containing the first reference to the item; Assigned by the CSL processor; Empty in non-note-based styles or when the item hasn’t been cited in any preceding notes in a document" />
-      <var name="issue" type="number" description="Issue number of the item or container holding the item (e.g. “5” when citing a journal article from journal volume 2, issue 5); Use volume-title for the title of the issue, if any" />
-      <var name="locator" type="number" description="A cite-specific pinpointer within the item (e.g. a page number within a book, or a volume in a multi-volume work); Must be accompanied in the input data by a label indicating the locator type (see the Locators term list), which determines which term is rendered by cs:label when the locator variable is selected." />
-      <var name="number" type="number" description="Number identifying the item (e.g. a report number)" />
-      <var name="number-of-pages" type="number" description="Total number of pages of the cited item" />
-      <var name="number-of-volumes" type="number" description="Total number of volumes, used when citing multi-volume books and such" />
-      <var name="page" type="number" description="Range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)" />
-      <var name="page-first" type="number" description="First page of the range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)" />
-      <var name="part-number" type="number" description="Number of the specific part of the item being cited (e.g. part 2 of a journal article); Use part-title for the title of the part, if any" />
-      <var name="printing-number" type="number" description="Printing number of the item or container holding the item" />
-      <var name="section" type="number" description="Section of the item or container holding the item (e.g. “§2.0.1” for a law; “politics” for a newspaper article)" />
-      <var name="supplement-number" type="number" description="Supplement number of the item or container holding the item (e.g. for secondary legal items that are regularly updated between editions)" />
-      <var name="version" type="number" description="Version of the item (e.g. “2.0.9” for a software program)" />
-      <var name="volume" type="number" description="Volume number of the item (e.g. “2” when citing volume 2 of a book) or the container holding the item (e.g. “2” when citing a chapter from volume 2 of a book); Use volume-title for the title of the volume, if any" />
-      <var name="accessed" type="date" description="Date the item has been accessed" />
-      <var name="available-date" type="date" description="Date the item was initially available (e.g. the online publication date of a journal article before its formal publication date; the date a treaty was made available for signing)" />
-      <var name="event-date" type="date" description="Date the event related to an item took place" />
-      <var name="issued" type="date" description="Date the item was issued/published" />
-      <var name="original-date" type="date" description="Issue date of the original version" />
-      <var name="submitted" type="date" description="Date the item (e.g. a manuscript) was submitted for publication" />
-      <var name="author" type="name" description="Author" />
-      <var name="chair" type="name" description="The person leading the session containing a presentation (e.g. the organizer of the container-title of a speech)" />
-      <var name="collection-editor" type="name" description="Editor of the collection holding the item (e.g. the series editor for a book)" />
-      <var name="compiler" type="name" description="Person compiling or selecting material for an item from the works of various persons or bodies (e.g. for an anthology)" />
-      <var name="composer" type="name" description="Composer (e.g. of a musical score)" />
-      <var name="container-author" type="name" description="Author of the container holding the item (e.g. the book author for a book chapter)" />
-      <var name="contributor" type="name" description="A minor contributor to the item; typically cited using “with” before the name when listed in a bibliography" />
-      <var name="curator" type="name" description="Curator of an exhibit or collection (e.g. in a museum)" />
-      <var name="director" type="name" description="Director (e.g. of a film)" />
-      <var name="editor" type="name" description="Editor" />
-      <var name="editorial-director" type="name" description="Managing editor (“Directeur de la Publication” in French)" />
-      <var name="editor-translator" type="name" description="Combined editor and translator of a work; The citation processory must be automatically generate if editor and translator variables are identical; May also be provided directly in item data" />
-      <var name="executive-producer" type="name" description="Executive producer (e.g. of a television series)" />
-      <var name="guest" type="name" description="Guest (e.g. on a TV show or podcast)" />
-      <var name="host" type="name" description="Host (e.g. of a TV show or podcast)" />
-      <var name="illustrator" type="name" description="Illustrator (e.g. of a children’s book or graphic novel)" />
-      <var name="interviewer" type="name" description="Interviewer (e.g. of an interview)" />
-      <var name="narrator" type="name" description="Narrator (e.g. of an audio book)" />
-      <var name="organizer" type="name" description="Organizer of an event (e.g. organizer of a workshop or conference)" />
-      <var name="original-author" type="name" description="The original creator of a work (e.g. the form of the author name listed on the original version of a book; the historical author of a work; the original songwriter or performer for a musical piece; the original developer or programmer for a piece of software; the original author of an adapted work such as a book adapted into a screenplay)" />
-      <var name="performer" type="name" description="Performer of an item (e.g. an actor appearing in a film; a muscian performing a piece of music)" />
-      <var name="producer" type="name" description="Producer (e.g. of a television or radio broadcast)" />
-      <var name="recipient" type="name" description="Recipient (e.g. of a letter)" />
-      <var name="reviewed-author" type="name" description="Author of the item reviewed by the current item" />
-      <var name="script-writer" type="name" description="Writer of a script or screenplay (e.g. of a film)" />
-      <var name="series-creator" type="name" description="Creator of a series (e.g. of a television series)" />
-      <var name="translator" type="name" description="Translator" />
-    </vars>
-  </cslVars>
-  <cslVars>
-    <itemTypes>
-    </itemTypes>
-    <vars>
-      <var name="abstract" type="standard" description="Abstract of the item (e.g. the abstract of a journal article)" />
-      <var name="annote" type="standard" description="Short markup, decoration, or annotation to the item (e.g., to indicate items included in a review); For descriptive text (e.g., in an annotated bibliography), use note instead" />
-      <var name="archive" type="standard" description="Archive storing the item" />
-      <var name="archive_collection" type="standard" description="Collection the item is part of within an archive" />
-      <var name="archive_location" type="standard" description="Storage location within an archive (e.g. a box and folder number)" />
-      <var name="archive-place" type="standard" description="Geographic location of the archive" />
-      <var name="authority" type="standard" description="Issuing or judicial authority (e.g. “USPTO” for a patent, “Fairfax Circuit Court” for a legal case)" />
-      <var name="call-number" type="standard" description="Call number (to locate the item in a library)" />
-      <var name="citation-key" type="standard" description="Identifier of the item in the input data file (analogous to BibTeX entrykey); Use this variable to facilitate conversion between word-processor and plain-text writing systems; For an identifer intended as formatted output label for a citation (e.g. “Ferr78”), use citation-label instead" />
-      <var name="citation-label" type="standard" description="Label identifying the item in in-text citations of label styles (e.g. “Ferr78”); May be assigned by the CSL processor based on item metadata; For the identifier of the item in the input data file, use citation-key instead" />
-      <var name="collection-title" type="standard" description="Title of the collection holding the item (e.g. the series title for a book; the lecture series title for a presentation)" />
-      <var name="container-title" type="standard" description="Title of the container holding the item (e.g. the book title for a book chapter, the journal title for a journal article; the album title for a recording; the session title for multi-part presentation at a conference)" />
-      <var name="container-title-short" type="standard" description="Short/abbreviated form of container-title; Deprecated; use variable=&quot;container-title&quot; form=&quot;short&quot; instead" />
-      <var name="dimensions" type="standard" description="Physical (e.g. size) or temporal (e.g. running time) dimensions of the item" />
-      <var name="division" type="standard" description="Minor subdivision of a court with a jurisdiction for a legal item" />
-      <var name="DOI" type="standard" description="Digital Object Identifier (e.g. “10.1128/AEM.02591-07”)" />
-      <var name="event" type="standard" description="Deprecated legacy variant of event-title" />
-      <var name="event-title" type="standard" description="Name of the event related to the item (e.g. the conference name when citing a conference paper; the meeting where presentation was made)" />
-      <var name="event-place" type="standard" description="Geographic location of the event related to the item (e.g. “Amsterdam, The Netherlands”)" />
-      <var name="genre" type="standard" description="Type, class, or subtype of the item (e.g. “Doctoral dissertation” for a PhD thesis; “NIH Publication” for an NIH technical report); Do not use for topical descriptions or categories (e.g. “adventure” for an adventure movie)" />
-      <var name="ISBN" type="standard" description="International Standard Book Number (e.g. “978-3-8474-1017-1”)" />
-      <var name="ISSN" type="standard" description="International Standard Serial Number" />
-      <var name="jurisdiction" type="standard" description="Geographic scope of relevance (e.g. “US” for a US patent; the court hearing a legal case)" />
-      <var name="keyword" type="standard" description="Keyword(s) or tag(s) attached to the item" />
-      <var name="language" type="standard" description="The language of the item; Should be entered as an ISO 639-1 two-letter language code (e.g. “en”, “zh”), optionally with a two-letter locale code (e.g. “de-DE”, “de-AT”)" />
-      <var name="license" type="standard" description="The license information applicable to an item (e.g. the license an article or software is released under; the copyright information for an item; the classification status of a document)" />
-      <var name="medium" type="standard" description="Description of the item’s format or medium (e.g. “CD”, “DVD”, “Album”, etc.)" />
-      <var name="note" type="standard" description="Descriptive text or notes about an item (e.g. in an annotated bibliography)" />
-      <var name="original-publisher" type="standard" description="Original publisher, for items that have been republished by a different publisher" />
-      <var name="original-publisher-place" type="standard" description="Geographic location of the original publisher (e.g. “London, UK”)" />
-      <var name="original-title" type="standard" description="Title of the original version (e.g. “Война и мир”, the untranslated Russian title of “War and Peace”)" />
-      <var name="part-title" type="standard" description="Title of the specific part of an item being cited" />
-      <var name="PMCID" type="standard" description="PubMed Central reference number" />
-      <var name="PMID" type="standard" description="PubMed reference number" />
-      <var name="publisher" type="standard" description="Publisher" />
-      <var name="publisher-place" type="standard" description="Geographic location of the publisher" />
-      <var name="references" type="standard" description="Resources related to the procedural history of a legal case or legislation; Can also be used to refer to the procedural history of other items (e.g. “Conference canceled” for a presentation accepted as a conference that was subsequently canceled; details of a retraction or correction notice)" />
-      <var name="reviewed-genre" type="standard" description="Type of the item being reviewed by the current item (e.g. book, film)" />
-      <var name="reviewed-title" type="standard" description="Title of the item reviewed by the current item" />
-      <var name="scale" type="standard" description="Scale of e.g. a map or model" />
-      <var name="source" type="standard" description="Source from whence the item originates (e.g. a library catalog or database)" />
-      <var name="status" type="standard" description="Publication status of the item (e.g. “forthcoming”; “in press”; “advance online publication”; “retracted”)" />
-      <var name="title" type="standard" description="Primary title of the item" />
-      <var name="title-short" type="standard" description="Short/abbreviated form of title; Deprecated; use variable=&quot;title&quot; form=&quot;short&quot; instead" />
-      <var name="URL" type="standard" description="Uniform Resource Locator (e.g. “https://aem.asm.org/cgi/content/full/74/9/2766”)" />
-      <var name="volume-title" type="standard" description="Title of the volume of the item or container holding the item; Also use for titles of periodical special issues, special sections, and the like" />
-      <var name="year-suffix" type="standard" description="Disambiguating year suffix in author-date styles (e.g. “a” in “Doe, 1999a”)" />
-      <var name="chapter-number" type="number" description="Chapter number (e.g. chapter number in a book; track number on an album)" />
-      <var name="citation-number" type="number" description="Index (starting at 1) of the cited reference in the bibliography (generated by the CSL processor)" />
-      <var name="collection-number" type="number" description="Number identifying the collection holding the item (e.g. the series number for a book)" />
-      <var name="edition" type="number" description="(Container) edition holding the item (e.g. “3” when citing a chapter in the third edition of a book)" />
-      <var name="first-reference-note-number" type="number" description="Number of a preceding note containing the first reference to the item; Assigned by the CSL processor; Empty in non-note-based styles or when the item hasn’t been cited in any preceding notes in a document" />
-      <var name="issue" type="number" description="Issue number of the item or container holding the item (e.g. “5” when citing a journal article from journal volume 2, issue 5); Use volume-title for the title of the issue, if any" />
-      <var name="locator" type="number" description="A cite-specific pinpointer within the item (e.g. a page number within a book, or a volume in a multi-volume work); Must be accompanied in the input data by a label indicating the locator type (see the Locators term list), which determines which term is rendered by cs:label when the locator variable is selected." />
-      <var name="number" type="number" description="Number identifying the item (e.g. a report number)" />
-      <var name="number-of-pages" type="number" description="Total number of pages of the cited item" />
-      <var name="number-of-volumes" type="number" description="Total number of volumes, used when citing multi-volume books and such" />
-      <var name="page" type="number" description="Range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)" />
-      <var name="page-first" type="number" description="First page of the range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)" />
-      <var name="part-number" type="number" description="Number of the specific part of the item being cited (e.g. part 2 of a journal article); Use part-title for the title of the part, if any" />
-      <var name="printing-number" type="number" description="Printing number of the item or container holding the item" />
-      <var name="section" type="number" description="Section of the item or container holding the item (e.g. “§2.0.1” for a law; “politics” for a newspaper article)" />
-      <var name="supplement-number" type="number" description="Supplement number of the item or container holding the item (e.g. for secondary legal items that are regularly updated between editions)" />
-      <var name="version" type="number" description="Version of the item (e.g. “2.0.9” for a software program)" />
-      <var name="volume" type="number" description="Volume number of the item (e.g. “2” when citing volume 2 of a book) or the container holding the item (e.g. “2” when citing a chapter from volume 2 of a book); Use volume-title for the title of the volume, if any" />
-      <var name="accessed" type="date" description="Date the item has been accessed" />
-      <var name="available-date" type="date" description="Date the item was initially available (e.g. the online publication date of a journal article before its formal publication date; the date a treaty was made available for signing)" />
-      <var name="event-date" type="date" description="Date the event related to an item took place" />
-      <var name="issued" type="date" description="Date the item was issued/published" />
-      <var name="original-date" type="date" description="Issue date of the original version" />
-      <var name="submitted" type="date" description="Date the item (e.g. a manuscript) was submitted for publication" />
-      <var name="author" type="name" description="Author" />
-      <var name="chair" type="name" description="The person leading the session containing a presentation (e.g. the organizer of the container-title of a speech)" />
-      <var name="collection-editor" type="name" description="Editor of the collection holding the item (e.g. the series editor for a book)" />
-      <var name="compiler" type="name" description="Person compiling or selecting material for an item from the works of various persons or bodies (e.g. for an anthology)" />
-      <var name="composer" type="name" description="Composer (e.g. of a musical score)" />
-      <var name="container-author" type="name" description="Author of the container holding the item (e.g. the book author for a book chapter)" />
-      <var name="contributor" type="name" description="A minor contributor to the item; typically cited using “with” before the name when listed in a bibliography" />
-      <var name="curator" type="name" description="Curator of an exhibit or collection (e.g. in a museum)" />
-      <var name="director" type="name" description="Director (e.g. of a film)" />
-      <var name="editor" type="name" description="Editor" />
-      <var name="editorial-director" type="name" description="Managing editor (“Directeur de la Publication” in French)" />
-      <var name="editor-translator" type="name" description="Combined editor and translator of a work; The citation processory must be automatically generate if editor and translator variables are identical; May also be provided directly in item data" />
-      <var name="executive-producer" type="name" description="Executive producer (e.g. of a television series)" />
-      <var name="guest" type="name" description="Guest (e.g. on a TV show or podcast)" />
-      <var name="host" type="name" description="Host (e.g. of a TV show or podcast)" />
-      <var name="illustrator" type="name" description="Illustrator (e.g. of a children’s book or graphic novel)" />
-      <var name="interviewer" type="name" description="Interviewer (e.g. of an interview)" />
-      <var name="narrator" type="name" description="Narrator (e.g. of an audio book)" />
-      <var name="organizer" type="name" description="Organizer of an event (e.g. organizer of a workshop or conference)" />
-      <var name="original-author" type="name" description="The original creator of a work (e.g. the form of the author name listed on the original version of a book; the historical author of a work; the original songwriter or performer for a musical piece; the original developer or programmer for a piece of software; the original author of an adapted work such as a book adapted into a screenplay)" />
-      <var name="performer" type="name" description="Performer of an item (e.g. an actor appearing in a film; a muscian performing a piece of music)" />
-      <var name="producer" type="name" description="Producer (e.g. of a television or radio broadcast)" />
-      <var name="recipient" type="name" description="Recipient (e.g. of a letter)" />
-      <var name="reviewed-author" type="name" description="Author of the item reviewed by the current item" />
-      <var name="script-writer" type="name" description="Writer of a script or screenplay (e.g. of a film)" />
-      <var name="series-creator" type="name" description="Creator of a series (e.g. of a television series)" />
-      <var name="translator" type="name" description="Translator" />
+      <var name="abstract" type="standard" description="Abstract of the item (e.g. the abstract of a journal article)"/>
+      <var name="annote" type="standard" description="Short markup, decoration, or annotation to the item (e.g., to indicate items included in a review); For descriptive text (e.g., in an annotated bibliography), use note instead"/>
+      <var name="archive" type="standard" description="Archive storing the item"/>
+      <var name="archive_collection" type="standard" description="Collection the item is part of within an archive"/>
+      <var name="archive_location" type="standard" description="Storage location within an archive (e.g. a box and folder number)"/>
+      <var name="archive-place" type="standard" description="Geographic location of the archive"/>
+      <var name="authority" type="standard" description="Issuing or judicial authority (e.g. “USPTO” for a patent, “Fairfax Circuit Court” for a legal case)"/>
+      <var name="call-number" type="standard" description="Call number (to locate the item in a library)"/>
+      <var name="citation-key" type="standard" description="Identifier of the item in the input data file (analogous to BibTeX entrykey); Use this variable to facilitate conversion between word-processor and plain-text writing systems; For an identifer intended as formatted output label for a citation (e.g. “Ferr78”), use citation-label instead"/>
+      <var name="citation-label" type="standard" description="Label identifying the item in in-text citations of label styles (e.g. “Ferr78”); May be assigned by the CSL processor based on item metadata; For the identifier of the item in the input data file, use citation-key instead"/>
+      <var name="collection-title" type="standard" description="Title of the collection holding the item (e.g. the series title for a book; the lecture series title for a presentation)"/>
+      <var name="container-title" type="standard" description="Title of the container holding the item (e.g. the book title for a book chapter, the journal title for a journal article; the album title for a recording; the session title for multi-part presentation at a conference)"/>
+      <var name="container-title-short" type="standard" description="Short/abbreviated form of container-title; Deprecated; use variable=&quot;container-title&quot; form=&quot;short&quot; instead"/>
+      <var name="dimensions" type="standard" description="Physical (e.g. size) or temporal (e.g. running time) dimensions of the item"/>
+      <var name="division" type="standard" description="Minor subdivision of a court with a jurisdiction for a legal item"/>
+      <var name="DOI" type="standard" description="Digital Object Identifier (e.g. “10.1128/AEM.02591-07”)"/>
+      <var name="event" type="standard" description="Deprecated legacy variant of event-title"/>
+      <var name="event-title" type="standard" description="Name of the event related to the item (e.g. the conference name when citing a conference paper; the meeting where presentation was made)"/>
+      <var name="event-place" type="standard" description="Geographic location of the event related to the item (e.g. “Amsterdam, The Netherlands”)"/>
+      <var name="genre" type="standard" description="Type, class, or subtype of the item (e.g. “Doctoral dissertation” for a PhD thesis; “NIH Publication” for an NIH technical report); Do not use for topical descriptions or categories (e.g. “adventure” for an adventure movie)"/>
+      <var name="ISBN" type="standard" description="International Standard Book Number (e.g. “978-3-8474-1017-1”)"/>
+      <var name="ISSN" type="standard" description="International Standard Serial Number"/>
+      <var name="jurisdiction" type="standard" description="Geographic scope of relevance (e.g. “US” for a US patent; the court hearing a legal case)"/>
+      <var name="keyword" type="standard" description="Keyword(s) or tag(s) attached to the item"/>
+      <var name="language" type="standard" description="The language of the item; Should be entered as an ISO 639-1 two-letter language code (e.g. “en”, “zh”), optionally with a two-letter locale code (e.g. “de-DE”, “de-AT”)"/>
+      <var name="license" type="standard" description="The license information applicable to an item (e.g. the license an article or software is released under; the copyright information for an item; the classification status of a document)"/>
+      <var name="medium" type="standard" description="Description of the item’s format or medium (e.g. “CD”, “DVD”, “Album”, etc.)"/>
+      <var name="note" type="standard" description="Descriptive text or notes about an item (e.g. in an annotated bibliography)"/>
+      <var name="original-publisher" type="standard" description="Original publisher, for items that have been republished by a different publisher"/>
+      <var name="original-publisher-place" type="standard" description="Geographic location of the original publisher (e.g. “London, UK”)"/>
+      <var name="original-title" type="standard" description="Title of the original version (e.g. “Война и мир”, the untranslated Russian title of “War and Peace”)"/>
+      <var name="part-title" type="standard" description="Title of the specific part of an item being cited"/>
+      <var name="PMCID" type="standard" description="PubMed Central reference number"/>
+      <var name="PMID" type="standard" description="PubMed reference number"/>
+      <var name="publisher" type="standard" description="Publisher"/>
+      <var name="publisher-place" type="standard" description="Geographic location of the publisher"/>
+      <var name="references" type="standard" description="Resources related to the procedural history of a legal case or legislation; Can also be used to refer to the procedural history of other items (e.g. “Conference canceled” for a presentation accepted as a conference that was subsequently canceled; details of a retraction or correction notice)"/>
+      <var name="reviewed-genre" type="standard" description="Type of the item being reviewed by the current item (e.g. book, film)"/>
+      <var name="reviewed-title" type="standard" description="Title of the item reviewed by the current item"/>
+      <var name="scale" type="standard" description="Scale of e.g. a map or model"/>
+      <var name="source" type="standard" description="Source from whence the item originates (e.g. a library catalog or database)"/>
+      <var name="status" type="standard" description="Publication status of the item (e.g. “forthcoming”; “in press”; “advance online publication”; “retracted”)"/>
+      <var name="title" type="standard" description="Primary title of the item"/>
+      <var name="title-short" type="standard" description="Short/abbreviated form of title; Deprecated; use variable=&quot;title&quot; form=&quot;short&quot; instead"/>
+      <var name="URL" type="standard" description="Uniform Resource Locator (e.g. “https://aem.asm.org/cgi/content/full/74/9/2766”)"/>
+      <var name="volume-title" type="standard" description="Title of the volume of the item or container holding the item; Also use for titles of periodical special issues, special sections, and the like"/>
+      <var name="year-suffix" type="standard" description="Disambiguating year suffix in author-date styles (e.g. “a” in “Doe, 1999a”)"/>
+      <var name="chapter-number" type="number" description="Chapter number (e.g. chapter number in a book; track number on an album)"/>
+      <var name="citation-number" type="number" description="Index (starting at 1) of the cited reference in the bibliography (generated by the CSL processor)"/>
+      <var name="collection-number" type="number" description="Number identifying the collection holding the item (e.g. the series number for a book)"/>
+      <var name="edition" type="number" description="(Container) edition holding the item (e.g. “3” when citing a chapter in the third edition of a book)"/>
+      <var name="first-reference-note-number" type="number" description="Number of a preceding note containing the first reference to the item; Assigned by the CSL processor; Empty in non-note-based styles or when the item hasn’t been cited in any preceding notes in a document"/>
+      <var name="issue" type="number" description="Issue number of the item or container holding the item (e.g. “5” when citing a journal article from journal volume 2, issue 5); Use volume-title for the title of the issue, if any"/>
+      <var name="locator" type="number" description="A cite-specific pinpointer within the item (e.g. a page number within a book, or a volume in a multi-volume work); Must be accompanied in the input data by a label indicating the locator type (see the Locators term list), which determines which term is rendered by cs:label when the locator variable is selected."/>
+      <var name="number" type="number" description="Number identifying the item (e.g. a report number)"/>
+      <var name="number-of-pages" type="number" description="Total number of pages of the cited item"/>
+      <var name="number-of-volumes" type="number" description="Total number of volumes, used when citing multi-volume books and such"/>
+      <var name="page" type="number" description="Range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)"/>
+      <var name="page-first" type="number" description="First page of the range of pages the item (e.g. a journal article) covers in a container (e.g. a journal issue)"/>
+      <var name="part-number" type="number" description="Number of the specific part of the item being cited (e.g. part 2 of a journal article); Use part-title for the title of the part, if any"/>
+      <var name="printing-number" type="number" description="Printing number of the item or container holding the item"/>
+      <var name="section" type="number" description="Section of the item or container holding the item (e.g. “§2.0.1” for a law; “politics” for a newspaper article)"/>
+      <var name="supplement-number" type="number" description="Supplement number of the item or container holding the item (e.g. for secondary legal items that are regularly updated between editions)"/>
+      <var name="version" type="number" description="Version of the item (e.g. “2.0.9” for a software program)"/>
+      <var name="volume" type="number" description="Volume number of the item (e.g. “2” when citing volume 2 of a book) or the container holding the item (e.g. “2” when citing a chapter from volume 2 of a book); Use volume-title for the title of the volume, if any"/>
+      <var name="accessed" type="date" description="Date the item has been accessed"/>
+      <var name="available-date" type="date" description="Date the item was initially available (e.g. the online publication date of a journal article before its formal publication date; the date a treaty was made available for signing)"/>
+      <var name="event-date" type="date" description="Date the event related to an item took place"/>
+      <var name="issued" type="date" description="Date the item was issued/published"/>
+      <var name="original-date" type="date" description="Issue date of the original version"/>
+      <var name="submitted" type="date" description="Date the item (e.g. a manuscript) was submitted for publication"/>
+      <var name="author" type="name" description="Author"/>
+      <var name="chair" type="name" description="The person leading the session containing a presentation (e.g. the organizer of the container-title of a speech)"/>
+      <var name="collection-editor" type="name" description="Editor of the collection holding the item (e.g. the series editor for a book)"/>
+      <var name="compiler" type="name" description="Person compiling or selecting material for an item from the works of various persons or bodies (e.g. for an anthology)"/>
+      <var name="composer" type="name" description="Composer (e.g. of a musical score)"/>
+      <var name="container-author" type="name" description="Author of the container holding the item (e.g. the book author for a book chapter)"/>
+      <var name="contributor" type="name" description="A minor contributor to the item; typically cited using “with” before the name when listed in a bibliography"/>
+      <var name="curator" type="name" description="Curator of an exhibit or collection (e.g. in a museum)"/>
+      <var name="director" type="name" description="Director (e.g. of a film)"/>
+      <var name="editor" type="name" description="Editor"/>
+      <var name="editorial-director" type="name" description="Managing editor (“Directeur de la Publication” in French)"/>
+      <var name="editor-translator" type="name" description="Combined editor and translator of a work; The citation processory must be automatically generate if editor and translator variables are identical; May also be provided directly in item data"/>
+      <var name="executive-producer" type="name" description="Executive producer (e.g. of a television series)"/>
+      <var name="guest" type="name" description="Guest (e.g. on a TV show or podcast)"/>
+      <var name="host" type="name" description="Host (e.g. of a TV show or podcast)"/>
+      <var name="illustrator" type="name" description="Illustrator (e.g. of a children’s book or graphic novel)"/>
+      <var name="interviewer" type="name" description="Interviewer (e.g. of an interview)"/>
+      <var name="narrator" type="name" description="Narrator (e.g. of an audio book)"/>
+      <var name="organizer" type="name" description="Organizer of an event (e.g. organizer of a workshop or conference)"/>
+      <var name="original-author" type="name" description="The original creator of a work (e.g. the form of the author name listed on the original version of a book; the historical author of a work; the original songwriter or performer for a musical piece; the original developer or programmer for a piece of software; the original author of an adapted work such as a book adapted into a screenplay)"/>
+      <var name="performer" type="name" description="Performer of an item (e.g. an actor appearing in a film; a muscian performing a piece of music)"/>
+      <var name="producer" type="name" description="Producer (e.g. of a television or radio broadcast)"/>
+      <var name="recipient" type="name" description="Recipient (e.g. of a letter)"/>
+      <var name="reviewed-author" type="name" description="Author of the item reviewed by the current item"/>
+      <var name="script-writer" type="name" description="Writer of a script or screenplay (e.g. of a film)"/>
+      <var name="series-creator" type="name" description="Creator of a series (e.g. of a television series)"/>
+      <var name="translator" type="name" description="Translator"/>
     </vars>
   </cslVars>
 </map>
