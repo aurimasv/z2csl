@@ -1,7 +1,8 @@
 #!/bin/bash
 
 mkdir -p build
-git archive --format=zip -o build/z2csl.xpi HEAD \
+rm -f build/z2csl.xpi
+zip -r  build/z2csl.xpi \
 	chrome.manifest \
 	install.rdf \
 	content/
