@@ -8,7 +8,8 @@
 BRANCH=$(git symbolic-ref --short HEAD)
 echo "$BRANCH"
 
-status=$(git status | grep 'working directory clean')
+status=$(git status | grep 'working tree clean')
+echo "$status"
 if [[ -z "$status" ]]; then
     echo "Working directory is not clean."
 	exit
