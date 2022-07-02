@@ -3,7 +3,7 @@
 
 <map>
   <zoteroVersion value="6.0.9-beta.3+d12f3eda6" />
-  <date value="Thu, 02 Jun 2022 00:56:39 GMT" />
+  <date value="Thu, 04 Jun 2022 00:56:39 GMT" />
   <zTypes>
     <typeMap zType="artwork" cslType="graphic">
       <field label="Title" value="title" />
