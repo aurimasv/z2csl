@@ -1,0 +1,2 @@
+content	z2csl	content/
+overlay	chrome://zotero/content/standalone/standalone.xul	chrome://z2csl/content/overlay.xul
